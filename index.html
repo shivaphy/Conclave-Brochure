@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <title>Faculty Conclave 2027 | Jain College of Engineering, Belagavi</title>
+  
+  <!-- Typography: Inter, Playfair Display, & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- QRCode.js Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Tailwind Configuration with Academic Palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            jce: {
+              50: '#f0f5ff',
+              100: '#e0edff',
+              200: '#c7dcfe',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0b132b',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Sleek Custom Scrollbars */
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #f8fafc; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* Interactive Visual In-Place Editing Outline */
+    body.inline-edit-active [data-editable] {
+      outline: 2px dashed #f59e0b !important;
+      outline-offset: 3px;
+      cursor: text;
+      transition: background-color 0.2s, outline 0.2s;
+      border-radius: 4px;
+    }
+    body.inline-edit-active [data-editable]:hover {
+      background-color: rgba(254, 243, 199, 0.45) !important;
+      outline: 2px solid #d97706 !important;
+    }
+    body.inline-edit-active [data-editable]:focus {
+      outline: 2px solid #2563eb !important;
+      background-color: rgba(219, 234, 254, 0.45) !important;
+    }
+
+    /* Print & High-Fidelity PDF Output Rules */
+    @page {
+      size: A4 portrait;
+      margin: 12mm 10mm 12mm 10mm;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 10.5pt !important;
+        line-height: 1.35 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Suppress admin bars, toolbars, and interaction modals during printing */
+      #action-toolbar, #nav-sticky-header, #admin-floating-badge, 
+      #secret-auth-modal, #admin-cms-modal, #registration-modal, 
+      .no-print, [data-admin-only] {
+        display: none !important;
+      }
+
+      .page-break-before {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
+
+      .page-break-inside-avoid {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+        box-shadow: none !important;
+      }
+
+      .border {
+        border-color: #cbd5e1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen selection:bg-blue-600 selection:text-white">
+
+  <!-- Floating Action Toolbar for PDF & Registration -->
+  <aside id="action-toolbar" aria-label="Quick Actions" class="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md p-1.5 rounded-2xl shadow-xl border border-slate-200">
+    <button 
+      type="button" 
+      onclick="window.print()" 
+      class="inline-flex items-center gap-1.5 px-3 py-2 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer"
+      title="Print or Save Official Brochure as PDF"
+    >
+      <i data-lucide="printer" class="w-3.5 h-3.5 text-gold-400"></i>
+      <span class="hidden xs:inline">Print / PDF</span>
+    </button>
+    
+    <a 
+      href="#registration" 
+      class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gold-500 hover:bg-gold-600 text-slate-950 rounded-xl text-xs font-black transition shadow-xs cursor-pointer"
+    >
+      <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
+      <span>Register</span>
+    </a>
+  </aside>
+
+  <!-- Sticky Institutional Navigation Header -->
+  <header id="nav-sticky-header" class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+        
+        <!-- College Identity Block (Triple-Click triggers 9999 Passkey) -->
+        <div 
+          id="brand-header-trigger"
+          class="flex items-center gap-2.5 sm:gap-3 select-none cursor-pointer group min-w-0" 
+          title="Jain College of Engineering (Triple-click for Admin Access)"
+        >
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white p-1 border border-slate-200 shadow-xs flex items-center justify-center shrink-0 group-hover:border-gold-400 transition">
+            <img 
+              id="live-logo-header"
+              src="jce-logo.png" 
+              alt="Jain College of Engineering Crest" 
+              class="w-full h-full object-contain"
+              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+            />
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[10px] font-black tracking-wider text-jce-700 uppercase">JGI Group</span>
+              <span class="w-1 h-1 rounded-full bg-gold-500"></span>
+              <span class="text-[10px] font-semibold text-slate-500">Belagavi, Karnataka</span>
+            </div>
+            <h1 id="live-college-name" class="text-xs sm:text-base font-extrabold text-slate-900 truncate">
+              Jain College of Engineering
+            </h1>
+            <p id="live-college-badges" class="text-[8px] sm:text-[10px] text-slate-500 font-medium truncate hidden xs:block">
+              Affiliated to VTU-Belagavi · Approved by AICTE · Accredited by NBA (CSE & ECE)
+            </p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold text-slate-700">
+          <a href="#hero" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Conclave</a>
+          <a href="#overview" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">About JCE</a>
+          <a href="#tracks" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Tracks</a>
+          <a href="#guidelines" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Author Policies</a>
+          <a href="#rubric" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Review Rubric</a>
+          <a href="#deadlines" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Schedule</a>
+          <a href="#committee" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Committee</a>
+          <a href="#venue" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Venue</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a 
+            href="#registration" 
+            class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold transition shadow-xs"
+          >
+            <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Submit Paper</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-10">
+
+    <!-- 1. HERO OPENING BANNER -->
+    <section id="hero" class="relative rounded-3xl bg-gradient-to-br from-jce-950 via-jce-900 to-slate-900 text-white overflow-hidden p-6 sm:p-10 lg:p-12 shadow-2xl border border-slate-800">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+      
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-gold-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span id="live-hero-badge" data-editable="hero.badge">University Faculty Academic Convention</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+            <span id="live-hero-title" data-editable="hero.title">Faculty Conclave 2027</span>
+          </h2>
+          
+          <p class="text-xl sm:text-2xl font-serif italic text-blue-200">
+            "<span id="live-hero-tagline" data-editable="hero.tagline">Inspire, Engage and Innovate</span>"
+          </p>
+
+          <p id="live-hero-description" data-editable="hero.description" class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl pt-1">
+            Faculty Conclave 2027 provides a premier collaborative platform dedicated to advancing engineering education, rigorous translational research, and institutional synergy among technical educators. Designed to bridge classroom pedagogical methodologies with accredited outcome metrics, this convention empowers university-level faculty to formulate agile instructional models and strengthen academic excellence across Tier-1 institutions.
+          </p>
+
+          <div class="pt-3 flex flex-wrap gap-3">
+            <a href="#tracks" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gold-500 hover:bg-gold-600 text-slate-950 font-black text-xs sm:text-sm transition shadow-md">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>Explore Thematic Tracks</span>
+            </a>
+            <a href="#guidelines" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition backdrop-blur-sm">
+              <i data-lucide="file-text" class="w-4 h-4 text-gold-400"></i>
+              <span>Publication Handbook v1</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Official Insignia & Accredited Identity Badge -->
+        <div class="lg:col-span-4 bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-center space-y-4">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto p-2 bg-white rounded-2xl shadow-xl flex items-center justify-center">
+            <img 
+              id="live-logo-hero"
+              src="jce-logo.png" 
+              alt="JCE Insignia" 
+              class="w-full h-full object-contain"
+              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+            />
+          </div>
+          <div>
+            <h3 id="live-college-badge-title" data-editable="institution.name" class="text-base font-extrabold text-white">Jain College of Engineering</h3>
+            <p id="live-college-estd" data-editable="institution.subtitle" class="text-xs text-gold-400 font-semibold">Estd. 2010 · Belagavi, Karnataka</p>
+          </div>
+          <div class="pt-2 border-t border-white/10 space-y-2 text-xs text-slate-300 text-left">
+            <div class="flex items-center gap-2">
+              <i data-lucide="award" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <span id="live-stat-vtu" data-editable="institution.vtu"><strong>Affiliation:</strong> VTU-Belagavu</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span id="live-stat-aicte" data-editable="institution.aicte"><strong>Statutory:</strong> Approved by AICTE, New Delhi</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-400 shrink-0"></i>
+              <span id="live-stat-nba" data-editable="institution.nba"><strong>NBA Accredited:</strong> CSE & ECE Departments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INSTITUTIONAL OVERVIEW & VISION / MISSION -->
+    <section id="overview" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8 page-break-inside-avoid">
+      <div class="border-b border-slate-100 pb-5">
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-jce-50 px-3 py-1 rounded-full border border-jce-200">
+          Institutional Profile & Credentials
+        </span>
+        <h3 id="live-overview-heading" data-editable="overview.heading" class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          Jain College of Engineering, Belagavi
+        </h3>
+        <p id="live-overview-sub" data-editable="overview.subheading" class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
+          A Constituent Institution of JGI Group · Affiliated to VTU-Belagavi · Approved by AICTE · Accredited by NBA (CSE & ECE)
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Vision -->
+        <div class="bg-slate-50 rounded-2xl p-6 border-l-4 border-jce-800 space-y-3">
+          <div class="flex items-center gap-2 text-jce-900 font-extrabold text-sm uppercase tracking-wide">
+            <i data-lucide="eye" class="w-5 h-5 text-jce-700"></i>
+            <span>College Vision</span>
+          </div>
+          <p id="live-vision-text" data-editable="institution.vision" class="text-slate-700 text-sm leading-relaxed italic">
+            "To emerge as a premier technical institution of excellence, imparting transformative engineering education, fostering ethical leadership, and inspiring cutting-edge research to serve societal and global technological challenges."
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="bg-slate-50 rounded-2xl p-6 border-l-4 border-gold-500 space-y-3">
+          <div class="flex items-center gap-2 text-slate-900 font-extrabold text-sm uppercase tracking-wide">
+            <i data-lucide="compass" class="w-5 h-5 text-gold-600"></i>
+            <span>College Mission</span>
+          </div>
+          <div id="live-mission-container" class="space-y-1.5 text-slate-700 text-xs sm:text-sm leading-relaxed">
+            <!-- Dynamically Rendered Mission Points -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 text-center">
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="block text-2xl font-black text-jce-800">VTU</span>
+          <span class="text-xs font-semibold text-slate-600">Affiliated University</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="block text-2xl font-black text-emerald-700">AICTE</span>
+          <span class="text-xs font-semibold text-slate-600">Statutory Approval</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="block text-2xl font-black text-gold-600">NBA</span>
+          <span class="text-xs font-semibold text-slate-600">Accredited (CSE & ECE)</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="block text-2xl font-black text-jce-900">JGI</span>
+          <span class="text-xs font-semibold text-slate-600">Global Foundation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CONFERENCE THEMATIC TRACKS -->
+    <section id="tracks" class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Call For Papers · Compendium 2027
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900">Thematic Conference Tracks</h3>
+        <p class="text-slate-600 text-xs sm:text-sm">
+          Aligned with the revised 9-Criterion NBA framework and 7-Criterion NAAC quality metrics.
+        </p>
+      </div>
+
+      <div id="live-tracks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically Rendered Tracks -->
+      </div>
+    </section>
+
+    <!-- 4. PUBLICATION & IEEE SPECIFICATIONS -->
+    <section id="guidelines" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8 page-break-before">
+      <div>
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Author Regulations & Compliance
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          Paper Publication Guidelines & IEEE Formatting
+        </h3>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">
+          Mandatory submission regulations codified in the <em>Faculty Conclave Publication Handbook v1</em>.
+        </p>
+      </div>
+
+      <div id="live-guidelines-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically Populated Guidelines -->
+      </div>
+    </section>
+
+    <!-- 5. 5-PARAMETER PEER REVIEW RUBRIC -->
+    <section id="rubric" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6 page-break-inside-avoid">
+      <div>
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Evaluation Matrix
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          5-Parameter Peer Review Rubric (50 Points Total)
+        </h3>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">
+          Every submission is evaluated against 5 independent criteria (10 points each; 1 = Poor, 5 = Average, 10 = Exceptional).
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead class="bg-slate-900 text-white font-extrabold uppercase text-[11px] tracking-wider">
+            <tr>
+              <th class="py-3.5 px-4 w-12 text-center">#</th>
+              <th class="py-3.5 px-4 w-60">Evaluation Parameter</th>
+              <th class="py-3.5 px-4">Evaluation Focus & Diagnostic Scope</th>
+              <th class="py-3.5 px-4 w-28 text-center">Weightage</th>
+            </tr>
+          </thead>
+          <tbody id="live-rubric-table-body" class="divide-y divide-slate-200 text-slate-700 font-medium">
+            <!-- Dynamically Loaded Rubric Rows -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Score Decision Bands -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-black text-emerald-800">40 – 50 Pts</span>
+            <span class="text-[10px] font-bold uppercase bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded">Band A</span>
+          </div>
+          <h5 class="text-sm font-black text-emerald-950 mt-1">Accept As-Is</h5>
+          <p class="text-xs text-emerald-800 mt-1">Ready for the publication compendium. Minor formatting verification only.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-black text-blue-800">30 – 39 Pts</span>
+            <span class="text-[10px] font-bold uppercase bg-blue-200 text-blue-900 px-2 py-0.5 rounded">Band B</span>
+          </div>
+          <h5 class="text-sm font-black text-blue-950 mt-1">Accept with Minor Revisions</h5>
+          <p class="text-xs text-blue-800 mt-1">Small adjustments to language, data presentation, or citations required.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-black text-amber-800">20 – 29 Pts</span>
+            <span class="text-[10px] font-bold uppercase bg-amber-200 text-amber-900 px-2 py-0.5 rounded">Band C</span>
+          </div>
+          <h5 class="text-sm font-black text-amber-950 mt-1">Conditional Major Revision</h5>
+          <p class="text-xs text-amber-800 mt-1">Substantial rewriting or deeper CO-PO data mapping required before re-review.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-black text-rose-800">&lt; 20 Pts</span>
+            <span class="text-[10px] font-bold uppercase bg-rose-200 text-rose-900 px-2 py-0.5 rounded">Band D</span>
+          </div>
+          <h5 class="text-sm font-black text-rose-950 mt-1">Reject</h5>
+          <p class="text-xs text-rose-800 mt-1">Structurally flawed, out of scope, or lacking measurable attainment metrics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. KEY DEADLINES & SCHEDULE -->
+    <section id="deadlines" class="bg-gradient-to-br from-slate-900 to-jce-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800 page-break-inside-avoid">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-800 pb-5 gap-3">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-gold-400 bg-white/10 px-3 py-1 rounded-full border border-white/10">
+            Important Milestones
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black text-white mt-2">
+            Key Deadlines & Schedule
+          </h3>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">Academic Year 2026–2027</div>
+      </div>
+
+      <div id="live-deadlines-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-6">
+        <!-- Dynamically Loaded Deadlines -->
+      </div>
+    </section>
+
+    <!-- 7. ORGANIZING COMMITTEE & LEADERSHIP -->
+    <section id="committee" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8 page-break-before">
+      <div>
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Governance & Steering Body
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          Organizing Committee & Leadership
+        </h3>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">
+          Leadership, academic deans, and department heads of Jain College of Engineering, Belagavi.
+        </p>
+      </div>
+
+      <!-- Leadership Row -->
+      <div id="live-leadership-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Dynamically Rendered Leadership Cards -->
+      </div>
+
+      <!-- Deans Row -->
+      <div>
+        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">Institutional Deans & Quality Assurance</h4>
+        <div id="live-deans-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Dynamically Loaded Deans -->
+        </div>
+      </div>
+
+      <!-- Department Heads Listing -->
+      <div>
+        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">Department Heads & Allied Academic Chairs</h4>
+        <div id="live-hods-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+          <!-- Dynamically Loaded HODs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. VENUE, CONNECTIVITY & CONVENER SECRETARIAT -->
+    <section id="venue" class="grid grid-cols-1 lg:grid-cols-12 gap-8 page-break-inside-avoid">
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Conclave Venue
+          </span>
+          <h3 id="live-venue-title" data-editable="venue.title" class="text-xl sm:text-2xl font-black text-slate-900 mt-2">
+            Sir M. Visvesvaraya Auditorium
+          </h3>
+          <p id="live-venue-desc" data-editable="venue.desc" class="text-xs text-slate-600 mt-1">
+            Jain College of Engineering Campus, Belagavi, Karnataka.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1 text-xs">
+          <p class="font-bold text-slate-900">Campus Postal Address:</p>
+          <p id="live-venue-address" data-editable="venue.address" class="text-slate-600 leading-relaxed font-mono whitespace-pre-line">
+            Jain College of Engineering
+            599/2, T.S. Nagar, Hunchanhatti Road, Machhe,
+            Belagavi – 590014, Karnataka, India
+          </p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <h4 class="text-xs font-extrabold text-slate-900 uppercase tracking-wide">Transit & Transportation Accessibility:</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="flex items-center gap-1.5 text-blue-800 font-bold mb-1">
+                <i data-lucide="plane" class="w-3.5 h-3.5"></i>
+                <span>Airport (IXG)</span>
+              </div>
+              <p class="text-[11px] text-slate-500">Belagavi Sambra Airport: ~18 km. Regular flights from Bengaluru, Mumbai, Delhi & Hyderabad.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="flex items-center gap-1.5 text-blue-800 font-bold mb-1">
+                <i data-lucide="train" class="w-3.5 h-3.5"></i>
+                <span>Railway Terminal</span>
+              </div>
+              <p class="text-[11px] text-slate-500">Belagavi Railway Station (BGM): ~8 km with city bus and taxi connections.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="flex items-center gap-1.5 text-blue-800 font-bold mb-1">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                <span>Highway Access</span>
+              </div>
+              <p class="text-[11px] text-slate-500">Directly accessible via NH 48 (Pune-Bengaluru corridor) with bypass routes to Machhe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-gradient-to-br from-jce-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-6">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-gold-400 bg-white/10 px-3 py-1 rounded-full border border-white/10">
+            Convener Secretariat
+          </span>
+          <h3 class="text-xl font-bold text-white mt-2">Correspondence & Inquiries</h3>
+          
+          <div class="mt-4 space-y-3 text-xs text-slate-300">
+            <div class="flex items-start gap-3">
+              <i data-lucide="user" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong id="live-convener-name" data-editable="contact.convenerName" class="text-white block">Dr. Shivkumar Math</strong>
+                <span id="live-convener-role" data-editable="contact.convenerRole">Convener, Faculty Conclave 2027</span>
+                <span id="live-convener-dept" data-editable="contact.convenerDept" class="block text-slate-400">Professor & Head, Dept. of Physics</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <a id="live-convener-email" data-editable="contact.email" href="mailto:conclave2027@jce.ac.in" class="text-gold-300 hover:underline">conclave2027@jce.ac.in</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <span id="live-convener-phone" data-editable="contact.phone">+91 831 2411192 / +91 94481 00000</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="globe" class="w-4 h-4 text-gold-400 shrink-0"></i>
+              <a id="live-convener-web" data-editable="contact.web" href="https://www.jce.ac.in" target="_blank" class="text-slate-300 hover:text-white underline">www.jce.ac.in</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 text-[11px] text-slate-400">
+          Official publication compendium queries should specify the assigned Paper ID and thematic track code.
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DYNAMIC CUSTOM CONTENT BLOCKS (ADMIN INJECTED) -->
+    <section id="custom-blocks-section" class="space-y-6 hidden">
+      <div class="text-center max-w-2xl mx-auto space-y-1">
+        <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Special Announcements & Features
+        </span>
+        <h3 class="text-2xl font-black text-slate-900">Institutional Spotlights</h3>
+      </div>
+      <div id="live-custom-blocks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Admin-Created Dynamic Cards -->
+      </div>
+    </section>
+
+    <!-- 10. REGISTRATION & QR CODE SECTION -->
+    <section id="registration" class="bg-white rounded-3xl p-6 sm:p-10 border-2 border-jce-900 shadow-xl space-y-8 page-break-inside-avoid">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-8 space-y-4">
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+            Participant & Author Portal
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+            Register for Faculty Conclave 2027
+          </h3>
+          <p id="live-registration-desc" data-editable="registration.desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Faculty members, researchers, and academic leaders from AICTE-approved and university-affiliated technical institutions are invited to participate. Registration includes admission to all thematic tracks, keynote sessions, high-tea, conference kit, and peer-reviewed publication compendium entry upon paper acceptance.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button 
+              type="button" 
+              onclick="openRegistrationModal()"
+              class="inline-flex items-center gap-2 px-6 py-3.5 bg-jce-900 hover:bg-jce-800 text-white font-black text-xs sm:text-sm rounded-xl transition shadow-md cursor-pointer"
+            >
+              <i data-lucide="clipboard-pen" class="w-4 h-4 text-gold-400"></i>
+              <span>Launch Online Registration Form</span>
+            </button>
+            <a 
+              id="live-registration-link"
+              href="https://jce.ac.in/faculty-conclave-2027" 
+              target="_blank"
+              class="inline-flex items-center gap-2 px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm rounded-xl transition"
+            >
+              <i data-lucide="external-link" class="w-4 h-4 text-jce-600"></i>
+              <span>Direct Web Portal</span>
+            </a>
+          </div>
+
+          <p class="text-[11px] text-slate-500 font-mono">
+            Registration URL: <span id="live-registration-url-text" class="text-jce-700 underline font-semibold">https://jce.ac.in/faculty-conclave-2027</span>
+          </p>
+        </div>
+
+        <div class="md:col-span-4 bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center justify-center space-y-3">
+          <div id="qrcode-container" class="p-3 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center"></div>
+          <div>
+            <p class="text-xs font-bold text-slate-900">Scan to Register</p>
+            <p class="text-[10px] text-slate-500">Direct camera link for rapid mobile submission</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 mt-12 text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-6 text-center sm:text-left">
+        <div 
+          id="brand-footer-trigger"
+          class="flex items-center gap-3 select-none cursor-pointer group" 
+          title="Footer Seal (Triple-click for Admin Access)"
+        >
+          <div class="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 group-hover:ring-2 group-hover:ring-gold-400 transition">
+            <img 
+              id="live-logo-footer"
+              src="jce-logo.png" 
+              alt="JCE Logo" 
+              class="w-full h-full object-contain"
+              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+            />
+          </div>
+          <div>
+            <p class="text-white font-extrabold text-sm">Jain College of Engineering, Belagavi</p>
+            <p class="text-[11px] text-slate-400">Affiliated to VTU-Belagavi · Approved by AICTE · NBA Accredited (CSE & ECE)</p>
+          </div>
+        </div>
+
+        <p class="text-slate-400 text-xs">
+          Faculty Conclave 2027: <em>"Inspire, Engage and Innovate"</em>
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <p>© 2027 Jain College of Engineering, Belagavi. All rights reserved.</p>
+        <p class="text-slate-400">
+          Curated for Academic and Faculty Research Development · Campus Pin: 590014
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 1. HIDDEN AUTHENTICATION PIN MODAL (FOR '9999' PASSKEY) -->
+  <div id="secret-auth-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-sm rounded-3xl shadow-2xl overflow-hidden border border-slate-300 animate-in fade-in zoom-in-95 duration-200">
+      <div class="p-6 bg-slate-900 text-white text-center relative">
+        <div class="w-12 h-12 rounded-2xl bg-gold-500 text-slate-950 mx-auto flex items-center justify-center font-black mb-3 shadow-lg">
+          <i data-lucide="key-round" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-base font-extrabold">Institutional Administrator Gate</h3>
+        <p class="text-xs text-slate-400 mt-1">Enter authorized security passkey to access CMS</p>
+        <button onclick="closeSecretAuthModal()" class="absolute top-3 right-3 text-slate-400 hover:text-white cursor-pointer p-1">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4">
+        <div>
+          <label for="admin-pin-input" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+            Admin Passkey PIN
+          </label>
+          <input 
+            type="password" 
+            id="admin-pin-input" 
+            maxlength="8"
+            placeholder="••••" 
+            class="w-full px-4 py-3 bg-slate-50 text-slate-900 border border-slate-300 rounded-xl text-center text-xl font-mono tracking-widest focus:bg-white focus:outline-none focus:ring-2 focus:ring-jce-600"
+            onkeydown="if(event.key==='Enter') evaluateSecretPin()"
+          />
+        </div>
+
+        <p id="admin-pin-error" class="text-xs font-semibold text-rose-600 hidden flex items-center gap-1.5 justify-center">
+          <i data-lucide="alert-circle" class="w-4 h-4 shrink-0"></i>
+          <span>Invalid Passkey! Try again.</span>
+        </p>
+
+        <div class="flex gap-2 pt-1">
+          <button 
+            type="button" 
+            onclick="closeSecretAuthModal()" 
+            class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition cursor-pointer"
+          >
+            Cancel
+          </button>
+          <button 
+            type="button" 
+            onclick="evaluateSecretPin()" 
+            class="flex-1 py-2.5 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl text-xs transition shadow-xs cursor-pointer"
+          >
+            Unlock CMS
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DISCREET FLOATING ADMIN CONTROLS (VISIBLE ONLY AFTER PASSKEY 9999) -->
+  <aside id="admin-floating-badge" class="fixed bottom-4 left-4 z-40 hidden flex-col gap-2">
+    <div class="flex items-center gap-2 bg-slate-900/95 backdrop-blur-md text-white p-2 rounded-2xl shadow-2xl border border-slate-700 text-xs">
+      <div class="w-8 h-8 rounded-xl bg-gold-500 text-slate-950 flex items-center justify-center font-black shrink-0">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+      </div>
+      <div class="pr-2">
+        <span class="block font-bold text-white text-[11px] leading-tight">Admin CMS Active</span>
+        <span class="text-[9px] text-gold-400 font-mono">Passkey 9999 Verified</span>
+      </div>
+      <button 
+        type="button" 
+        onclick="openAdminCmsModal()" 
+        class="px-2.5 py-1.5 bg-jce-800 hover:bg-jce-700 text-white font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition"
+      >
+        <i data-lucide="sliders" class="w-3.5 h-3.5 text-gold-400"></i>
+        <span>Dashboard</span>
+      </button>
+      <button 
+        type="button" 
+        id="toggle-edit-mode-btn"
+        onclick="toggleInlineEditMode()" 
+        class="px-2.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition"
+        title="Toggle Direct In-Place Content Editing"
+      >
+        <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+        <span id="edit-mode-label">Edit Mode: Off</span>
+      </button>
+      <button 
+        type="button" 
+        onclick="deauthenticateAdmin()" 
+        class="p-1.5 text-slate-400 hover:text-rose-400 rounded-lg cursor-pointer transition"
+        title="Log Out Admin"
+      >
+        <i data-lucide="log-out" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 3. COMPREHENSIVE ADMIN CMS WORKSPACE MODAL -->
+  <div id="admin-cms-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4">
+    <div class="bg-white w-full max-w-5xl max-h-[94vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-slate-300 animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- CMS Modal Header -->
+      <div class="px-5 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 gap-2 shrink-0">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-9 h-9 rounded-xl bg-gold-500 text-slate-950 font-black flex items-center justify-center shrink-0">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <div class="truncate">
+            <h3 class="font-extrabold text-sm sm:text-base">Brochure Content Management System (CMS)</h3>
+            <p class="text-[10px] sm:text-xs text-slate-400">Authenticated via Passkey 9999 · Jain College of Engineering</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button 
+            type="button" 
+            onclick="exportBrochureJsonConfig()" 
+            class="hidden xs:inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-gold-300 text-xs font-semibold cursor-pointer border border-slate-700"
+            title="Download full brochure content backup as JSON"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Export JSON</span>
+          </button>
+          <button 
+            type="button" 
+            onclick="closeAdminCmsModal()" 
+            class="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 cursor-pointer"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CMS Navigation Tabs -->
+      <div class="px-4 bg-slate-100 border-b border-slate-200 flex gap-2 overflow-x-auto text-xs font-bold text-slate-600 py-1.5 shrink-0">
+        <button onclick="switchCmsTab('hero')" id="cms-tab-hero" class="py-2 px-3 border-b-2 border-jce-700 text-jce-800 whitespace-nowrap cursor-pointer">Hero & Banner</button>
+        <button onclick="switchCmsTab('vision')" id="cms-tab-vision" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Vision & Mission</button>
+        <button onclick="switchCmsTab('tracks')" id="cms-tab-tracks" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Thematic Tracks</button>
+        <button onclick="switchCmsTab('guidelines')" id="cms-tab-guidelines" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Guidelines & Rubric</button>
+        <button onclick="switchCmsTab('deadlines')" id="cms-tab-deadlines" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Key Deadlines</button>
+        <button onclick="switchCmsTab('committee')" id="cms-tab-committee" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Committee Roster</button>
+        <button onclick="switchCmsTab('venue')" id="cms-tab-venue" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Venue & Contact</button>
+        <button onclick="switchCmsTab('branding')" id="cms-tab-branding" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Branding & Logo</button>
+        <button onclick="switchCmsTab('custom')" id="cms-tab-custom" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Custom Blocks</button>
+      </div>
+
+      <!-- CMS Tab Content Panels -->
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-50 space-y-6 text-xs">
+
+        <!-- TAB 1: HERO & BANNER -->
+        <div id="cms-panel-hero" class="space-y-4">
+          <h4 class="text-sm font-black text-slate-900">Hero Section & Conclave Theme Configuration</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Badge Tagline</label>
+              <input type="text" id="cms-hero-badge" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Conclave Title</label>
+              <input type="text" id="cms-hero-title" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-bold">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Conclave Theme (In Quotes)</label>
+            <input type="text" id="cms-hero-tagline" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-serif italic text-jce-800">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Opening Descriptive Narrative (2-3 Sentences)</label>
+            <textarea id="cms-hero-desc" rows="3" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs leading-relaxed"></textarea>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">VTU Affiliation String</label>
+              <input type="text" id="cms-stat-vtu" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">AICTE Approval Status</label>
+              <input type="text" id="cms-stat-aicte" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">NBA Accreditation Tag</label>
+              <input type="text" id="cms-stat-nba" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: VISION & MISSION -->
+        <div id="cms-panel-vision" class="hidden space-y-4">
+          <h4 class="text-sm font-black text-slate-900">Institutional Vision & Mission Statement</h4>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">College Vision</label>
+            <textarea id="cms-vision-text" rows="3" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs italic leading-relaxed"></textarea>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="block font-bold text-slate-700 uppercase">College Mission Objectives (One per item)</label>
+              <button type="button" onclick="addMissionItem()" class="text-xs font-bold text-jce-700 hover:underline cursor-pointer">+ Add Objective</button>
+            </div>
+            <div id="cms-mission-list" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- TAB 3: THEMATIC TRACKS -->
+        <div id="cms-panel-tracks" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-slate-900">Conference Tracks Configuration</h4>
+            <button type="button" onclick="addNewTrackItem()" class="px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold cursor-pointer">
+              + New Track
+            </button>
+          </div>
+          <div id="cms-tracks-list" class="space-y-4"></div>
+        </div>
+
+        <!-- TAB 4: GUIDELINES & RUBRIC -->
+        <div id="cms-panel-guidelines" class="hidden space-y-6">
+          <div class="space-y-3">
+            <h4 class="text-sm font-black text-slate-900">Publication Handbook & Regulatory Rules</h4>
+            <div id="cms-guidelines-list" class="space-y-3"></div>
+          </div>
+          
+          <div class="space-y-3 pt-3 border-t border-slate-200">
+            <h4 class="text-sm font-black text-slate-900">5-Parameter Rubric Specifications</h4>
+            <div id="cms-rubric-list" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- TAB 5: KEY DEADLINES -->
+        <div id="cms-panel-deadlines" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-slate-900">Key Deadlines & Schedule Milestones</h4>
+            <button type="button" onclick="addNewDeadlineItem()" class="px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold cursor-pointer">
+              + Add Milestone
+            </button>
+          </div>
+          <div id="cms-deadlines-list" class="space-y-3"></div>
+        </div>
+
+        <!-- TAB 6: COMMITTEE ROSTER -->
+        <div id="cms-panel-committee" class="hidden space-y-6">
+          <div class="space-y-3">
+            <h4 class="text-sm font-black text-slate-900">Chief Conveners & Patrons</h4>
+            <div id="cms-leadership-list" class="space-y-3"></div>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200">
+            <h4 class="text-sm font-black text-slate-900">Institutional Deans & Quality Assurance</h4>
+            <div id="cms-deans-list" class="space-y-3"></div>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200">
+            <h4 class="text-sm font-black text-slate-900">Department Heads & Allied Academic Chairs</h4>
+            <div id="cms-hods-list" class="space-y-3"></div>
+          </div>
+        </div>
+
+        <!-- TAB 7: VENUE & CONTACT -->
+        <div id="cms-panel-venue" class="space-y-4 hidden">
+          <h4 class="text-sm font-black text-slate-900">Venue & Secretariat Contact Particulars</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Auditorium / Hall Title</label>
+              <input type="text" id="cms-venue-title" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Venue Subtitle</label>
+              <input type="text" id="cms-venue-desc" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Postal Address</label>
+            <textarea id="cms-venue-address" rows="3" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-mono"></textarea>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Convener Name</label>
+              <input type="text" id="cms-contact-name" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Convener Role / Title</label>
+              <input type="text" id="cms-contact-role" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Secretariat Email</label>
+              <input type="email" id="cms-contact-email" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Phone Contact Numbers</label>
+              <input type="text" id="cms-contact-phone" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 8: BRANDING & LOGO -->
+        <div id="cms-panel-branding" class="space-y-4 hidden">
+          <h4 class="text-sm font-black text-slate-900">Institutional Crest & QR Portal Link</h4>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Upload College Logo (PNG/JPG file)</label>
+            <div class="flex items-center gap-3">
+              <input 
+                type="file" 
+                id="cms-logo-file" 
+                accept="image/png, image/jpeg" 
+                onchange="handleLogoFileUpload(this)"
+                class="text-xs file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:bg-blue-50 file:text-blue-700 file:font-bold cursor-pointer"
+              />
+              <img id="cms-logo-preview" src="jce-logo.png" alt="Preview" class="w-10 h-10 object-contain p-0.5 border border-slate-300 rounded-lg">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Or Direct Logo Image URL</label>
+            <input type="text" id="cms-logo-url" placeholder="https://..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Online Registration URL (Generates QR Code)</label>
+            <input type="url" id="cms-reg-url" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-mono">
+          </div>
+        </div>
+
+        <!-- TAB 9: CUSTOM CONTENT BLOCKS -->
+        <div id="cms-panel-custom" class="space-y-4 hidden">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black text-slate-900">Custom Content Cards & Institutional Spotlights</h4>
+            <button type="button" onclick="addNewCustomBlock()" class="px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold cursor-pointer">
+              + New Custom Card
+            </button>
+          </div>
+          <div id="cms-custom-blocks-list" class="space-y-3"></div>
+        </div>
+
+      </div>
+
+      <!-- CMS Modal Footer & Controls -->
+      <div class="px-5 py-3.5 bg-slate-100 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+        <button 
+          type="button" 
+          onclick="resetBrochureDefaults()" 
+          class="text-xs font-bold text-rose-600 hover:text-rose-800 underline cursor-pointer"
+        >
+          Reset to Factory Defaults
+        </button>
+
+        <div class="flex items-center gap-2">
+          <button 
+            type="button" 
+            onclick="closeAdminCmsModal()" 
+            class="px-4 py-2 bg-white hover:bg-slate-200 text-slate-700 font-bold rounded-xl border border-slate-300 cursor-pointer text-xs"
+          >
+            Cancel
+          </button>
+          <button 
+            type="button" 
+            onclick="saveAllCmsChanges()" 
+            class="px-5 py-2 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl shadow-xs cursor-pointer text-xs flex items-center gap-1.5"
+          >
+            <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+            <span>Save & Apply Changes</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. PARTICIPANT REGISTRATION MODAL -->
+  <div id="registration-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+      <div class="px-6 py-4 bg-jce-900 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="clipboard-check" class="w-5 h-5 text-gold-400"></i>
+          <h3 class="font-extrabold text-sm sm:text-base">Faculty Conclave 2027 Registration</h3>
+        </div>
+        <button type="button" onclick="closeRegistrationModal()" class="text-slate-400 hover:text-white p-1 cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form onsubmit="handleRegistrationSubmit(event)" class="p-6 space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 uppercase mb-1">Full Name (with Prefix) *</label>
+          <input type="text" id="reg-name" required placeholder="e.g. Dr. Ananya Sharma / Prof. R. Rao" class="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-jce-600 focus:outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Designation *</label>
+            <input type="text" id="reg-title" required placeholder="e.g. Associate Professor / Dean" class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Department *</label>
+            <select id="reg-dept" required class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+              <option value="" disabled selected>Select Department</option>
+              <option value="CSE">Computer Science & Engineering (NBA)</option>
+              <option value="ECE">Electronics & Communication (NBA)</option>
+              <option value="AI_ML">AI & Machine Learning</option>
+              <option value="ME">Mechanical Engineering</option>
+              <option value="CV">Civil Engineering</option>
+              <option value="EEE">Electrical & Electronics</option>
+              <option value="Physics">Physics & Basic Sciences</option>
+              <option value="Management">MBA / MCA</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 uppercase mb-1">Institutional Affiliation *</label>
+          <input type="text" id="reg-college" required placeholder="e.g. Jain College of Engineering, Belagavi" class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Institutional Email ID *</label>
+            <input type="email" id="reg-email" required placeholder="name@college.ac.in" class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 uppercase mb-1">Mobile Contact No. *</label>
+            <input type="tel" id="reg-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile" class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 uppercase mb-1">Target Thematic Track</label>
+          <select id="reg-track" class="w-full px-3 py-2 border border-slate-300 rounded-xl">
+            <option value="Track 1">Track 1: Active Pedagogy (AP)</option>
+            <option value="Track 2">Track 2: Modern Strategies (MS)</option>
+            <option value="Track 3">Track 3: Digital Integration (DI)</option>
+            <option value="Track 4">Track 4: AI & EdTech (AI)</option>
+            <option value="Track 5">Track 5: Inclusion & OBE Attainment (IO)</option>
+            <option value="Delegate">General Academic Delegate (Non-Author)</option>
+          </select>
+        </div>
+
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-[11px] text-blue-900 leading-relaxed">
+          <strong>Registration Confirmation:</strong> An official acknowledgment slip and template download link will be dispatched immediately to your email address.
+        </div>
+
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="closeRegistrationModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit" class="px-5 py-2 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl shadow-xs cursor-pointer">
+            Complete Registration
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // BROCHURE CORE DATA STRUCTURE & FACTORY DEFAULTS
+    // =========================================================================
+    const DEFAULT_BROCHURE_DATA = {
+      hero: {
+        badge: "University Faculty Academic Convention",
+        title: "Faculty Conclave 2027",
+        tagline: "Inspire, Engage and Innovate",
+        description: "Faculty Conclave 2027 provides a premier collaborative platform dedicated to advancing engineering education, rigorous translational research, and institutional synergy among technical educators. Designed to bridge classroom pedagogical methodologies with accredited outcome metrics, this convention empowers university-level faculty to formulate agile instructional models and strengthen academic excellence across Tier-1 institutions."
+      },
+      institution: {
+        name: "Jain College of Engineering",
+        subtitle: "Estd. 2010 · Belagavi, Karnataka",
+        vtu: "Affiliation: VTU-Belagavu",
+        aicte: "Statutory: Approved by AICTE, New Delhi",
+        nba: "NBA Accredited: CSE & ECE Departments",
+        vision: '"To emerge as a premier technical institution of excellence, imparting transformative engineering education, fostering ethical leadership, and inspiring cutting-edge research to serve societal and global technological challenges."',
+        mission: [
+          "Deliver quality engineering and management programs through dynamic curriculum delivery, experiential pedagogical practices, and state-of-the-art laboratory ecosystems.",
+          "Promote interdisciplinary research, patent development, and industry-sponsored innovation hubs.",
+          "Inculcate ethical values, lifelong learning ethos, and professional competencies among faculty and budding engineers."
+        ]
+      },
+      overview: {
+        heading: "Jain College of Engineering, Belagavi",
+        subheading: "A Constituent Institution of JGI Group · Affiliated to VTU-Belagavi · Approved by AICTE · Accredited by NBA (CSE & ECE)"
+      },
+      tracks: [
+        {
+          code: "Track 1: AP",
+          badge: "NBA Crit. 2",
+          badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+          title: "Active Pedagogy & Problem-Based Learning",
+          desc: "Experiential learning frameworks, peer-led collaborative laboratories, engineering case study delivery, and real-world problem-based methodologies.",
+          compliance: "NBA Criterion 2 & NAAC Criterion II (Teaching-Learning & Evaluation)."
+        },
+        {
+          code: "Track 2: MS",
+          badge: "VTU Regs",
+          badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+          title: "Modern Pedagogical Strategies & Flipped Classrooms",
+          desc: "Flipped classroom frameworks for high-complexity engineering courses, inquiry-based models, and industry-oriented project delivery.",
+          compliance: "VTU Academic Regulations & NBA Criterion 4 (Student Performance)."
+        },
+        {
+          code: "Track 3: DI",
+          badge: "NBA Crit. 7",
+          badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+          title: "Digital Integration & Simulation Technologies",
+          desc: "Deployment of virtual laboratories for remote simulation, interactive 3D spatial visualization engines, and technology-enabled classrooms.",
+          compliance: "NBA Criterion 7 (Facilities) & NAAC Criterion IV (Infrastructure)."
+        },
+        {
+          code: "Track 4: AI",
+          badge: "NBA Crit. 3",
+          badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
+          title: "Artificial Intelligence & EdTech Innovation",
+          desc: "Automated code and essay evaluation systems, Socratic AI adaptive tutors for physics and engineering math, and ethical AI in student assessment.",
+          compliance: "NBA Criterion 3 (Outcome Assessment) & NAAC Criterion II."
+        },
+        {
+          code: "Track 5: IO",
+          badge: "NBA Crit. 9",
+          badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
+          title: "Inclusion, UDL & Direct OBE Attainment",
+          desc: "Universal Design for Learning (UDL), vernacular bilingual bridges for diverse learners, direct/indirect CO-PO attainment calculation models.",
+          compliance: "NBA Criterion 9 (Student Support) & Criterion 3 (OBE Assessment)."
+        }
+      ],
+      guidelines: [
+        {
+          icon: "layout-grid",
+          title: "IEEE Double-Column Layout",
+          desc: "Standard IEEE format on A4 / US Letter. Times New Roman (10 pt regular body text), 0.75 in (19 mm) margins, single line spacing, and justified double columns."
+        },
+        {
+          icon: "file-check",
+          title: "Word Counts & Structure",
+          desc: "Structured Abstract: 200–250 words summarizing objectives, methodology, and quantitative attainment results. Keywords: 4–6 terms. Full Paper: 1,500–3,000 words."
+        },
+        {
+          icon: "shield-alert",
+          title: "Similarity & Plagiarism Cap",
+          desc: "All submissions undergo rigorous anti-plagiarism screening. Manuscripts exceeding 15% overall similarity (excluding citations and bibliography) will be automatically returned."
+        },
+        {
+          icon: "eye-off",
+          title: "Double-Blind Peer Review",
+          desc: "The main manuscript file must contain zero author names, email IDs, affiliations, or institutional identifiers. A separate Title page must be provided."
+        },
+        {
+          icon: "bot",
+          title: "Mandatory AI-Use Disclosure",
+          desc: "Authors must declare any utilization of LLMs or generative AI tools (for language polishing or coding analysis) in an explicit AI Use Statement prior to references."
+        },
+        {
+          icon: "user-check",
+          title: "Ethics & Student Data Privacy",
+          desc: "Papers using marks, surveys, or classroom samples must fully anonymize records and report data in aggregate. Institutional ethics approval is strictly required."
+        }
+      ],
+      rubric: [
+        { num: "01", param: "Track Alignment & Relevance", focus: "Direct alignment with AP, MS, DI, AI, or IO tracks; tailored for higher technical/engineering education.", weight: "10 Pts" },
+        { num: "02", param: "Methodological Rigor & Innovation", focus: "Clarity of educational strategy, innovative implementation of EdTech/active learning designs, and scientific validity.", weight: "10 Pts" },
+        { num: "03", param: "Data & Attainment Metrics", focus: "Direct quantitative evidence of impact: student attainment improvements, mapped CO-PO figures, or statistical survey verification.", weight: "10 Pts" },
+        { num: "04", param: "Replicability & Scalability", focus: "Practical feasibility for adoption by other engineering faculties, departments, and technical universities.", weight: "10 Pts" },
+        { num: "05", param: "Structure, Language & IEEE Style", focus: "Writing clarity for a broad academic audience, proper figures/tables, and adherence to strict IEEE citation formats.", weight: "10 Pts" }
+      ],
+      deadlines: [
+        { phase: "Phase 01", title: "Abstract Submission", date: "March 15, 2027", desc: "200–250 words abstract with author affiliations.", color: "text-gold-400" },
+        { phase: "Phase 02", title: "Full Paper Deadline", date: "April 05, 2027", desc: "Anonymized IEEE double-column manuscript submission.", color: "text-blue-400" },
+        { phase: "Phase 03", title: "Review Notification", date: "April 25, 2027", desc: "Release of double-blind rubric evaluation & score bands.", color: "text-emerald-400" },
+        { phase: "Phase 04", title: "Camera-Ready Copy", date: "May 10, 2027", desc: "Final manuscript revisions & signed copyright forms.", color: "text-amber-400" },
+        { phase: "Main Event", title: "Conclave Dates", date: "May 28–29, 2027", desc: "Keynote presentations, paper sessions & awards.", color: "text-gold-300", highlight: true }
+      ],
+      committee: {
+        leadership: [
+          { role: "Patron & Director", name: "Dr. J. Shivakumar", title: "Principal & Director", inst: "Jain College of Engineering, Belagavi", badgeClass: "bg-blue-100 text-jce-900" },
+          { role: "Conclave Convener", name: "Dr. Shivkumar Math", title: "Professor & Head, Dept. of Physics", inst: "Convener · Faculty Conclave 2027", badgeClass: "bg-gold-200 text-gold-950", highlight: true },
+          { role: "Co-Convener", name: "Dr. Rajashekharagouda C. Patil", title: "Professor & Dean Academics", inst: "Jain College of Engineering, Belagavi", badgeClass: "bg-blue-100 text-jce-900" }
+        ],
+        deans: [
+          { name: "Dr. Sanjeev Sangami", title: "Dean, Innovation, Consultancy & Entr." },
+          { name: "Dr. Venkatratnam C. Chitturi", title: "Professor & Dean, R&D" },
+          { name: "Dr. Raghavendra P. Bakale", title: "IQAC Coordinator" },
+          { name: "Dr. Jayashree Rudagi", title: "Senior Professor" }
+        ],
+        hods: [
+          { name: "Dr. Uttam Patil", title: "Professor & Head, CSE", tag: "NBA Accredited Department", tagClass: "text-blue-700" },
+          { name: "Prof. Vinay Kumar R. Bagali", title: "Professor & Head, ECE", tag: "NBA Accredited Department", tagClass: "text-blue-700" },
+          { name: "Dr. Sachin Kumar", title: "Professor & Head, AI & ML", tag: "Emerging Tech", tagClass: "text-slate-400" },
+          { name: "Dr. Basavaraj Hubballi", title: "Professor & Head, Mechanical Engg.", tag: "Core Engineering", tagClass: "text-slate-400" },
+          { name: "Dr. Mithun B. M.", title: "Professor & Head, Civil Engg.", tag: "Core Engineering", tagClass: "text-slate-400" },
+          { name: "Dr. Mallikarjuna G. D.", title: "Professor & Head, EEE", tag: "Core Engineering", tagClass: "text-slate-400" },
+          { name: "Dr. Manuprasad B. K.", title: "Professor & Head, Chemistry", tag: "Basic Sciences", tagClass: "text-slate-400" },
+          { name: "Dr. Prashant Patil", title: "Professor & Head, Mathematics", tag: "Basic Sciences", tagClass: "text-slate-400" },
+          { name: "Dr. Rohitraj S. Jain", title: "Professor & Head, MBA", tag: "Postgraduate Studies", tagClass: "text-slate-400" },
+          { name: "Dr. Praveen Bansode", title: "Professor & Head, MCA", tag: "Postgraduate Studies", tagClass: "text-slate-400" }
+        ]
+      },
+      venue: {
+        title: "Sir M. Visvesvaraya Auditorium",
+        desc: "Jain College of Engineering Campus, Belagavi, Karnataka.",
+        address: "Jain College of Engineering\n599/2, T.S. Nagar, Hunchanhatti Road, Machhe,\nBelagavi – 590014, Karnataka, India"
+      },
+      contact: {
+        convenerName: "Dr. Shivkumar Math",
+        convenerRole: "Convener, Faculty Conclave 2027",
+        convenerDept: "Professor & Head, Dept. of Physics",
+        email: "conclave2027@jce.ac.in",
+        phone: "+91 831 2411192 / +91 94481 00000",
+        web: "https://www.jce.ac.in"
+      },
+      registration: {
+        desc: "Faculty members, researchers, and academic leaders from AICTE-approved and university-affiliated technical institutions are invited to participate. Registration includes admission to all thematic tracks, keynote sessions, high-tea, conference kit, and peer-reviewed publication compendium entry upon paper acceptance.",
+        url: "https://jce.ac.in/faculty-conclave-2027"
+      },
+      media: {
+        logoSrc: "jce-logo.png"
+      },
+      customBlocks: [
+        {
+          id: "block-1",
+          badge: "Special Plenary",
+          title: "OBE Attainment & NBA Accreditation Masterclass",
+          desc: "An intensive session led by national evaluators examining continuous quality improvement loops and Tier-1 attainment calculations."
+        }
+      ]
+    };
+
+    let brochureData = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA));
+    let isAdminAuthenticated = false;
+    let isInlineEditActive = false;
+
+    // =========================================================================
+    // MULTI-VECTOR HIDDEN AUTHENTICATION ('9999')
+    // =========================================================================
+    let keystrokeBuffer = "";
+    const SECRET_PIN = "9999";
+
+    // 1. Secret Keystroke Sequence '9999' Buffer Listener
+    window.addEventListener("keydown", (e) => {
+      // Don't intercept typing when inside an input or editable field
+      if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) {
+        return;
+      }
+
+      // Check Hotkey 'Ctrl + Shift + A' or 'Cmd + Shift + A'
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        openSecretAuthModal();
+        return;
+      }
+
+      // Track last 4 characters for '9999'
+      if (e.key.length === 1) {
+        keystrokeBuffer += e.key;
+        if (keystrokeBuffer.length > 10) keystrokeBuffer = keystrokeBuffer.slice(-10);
+        if (keystrokeBuffer.endsWith(SECRET_PIN)) {
+          authenticateAdminDirectly();
+          keystrokeBuffer = "";
+        }
+      }
+    });
+
+    // 2. Triple-Click Listener on College Logo or Footer Seal
+    function setupTripleClickTriggers() {
+      const attachTripleClick = (elementId) => {
+        const el = document.getElementById(elementId);
+        if (!el) return;
+        let clickCount = 0;
+        let timer = null;
+        el.addEventListener("click", () => {
+          clickCount++;
+          clearTimeout(timer);
+          if (clickCount >= 3) {
+            clickCount = 0;
+            openSecretAuthModal();
+          } else {
+            timer = setTimeout(() => { clickCount = 0; }, 500);
+          }
+        });
+      };
+      attachTripleClick("brand-header-trigger");
+      attachTripleClick("brand-footer-trigger");
+    }
+
+    // 3. Query Parameter Detection (?admin=9999)
+    function checkUrlQueryAuthentication() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("admin") === SECRET_PIN) {
+        authenticateAdminDirectly();
+      }
+    }
+
+    // Modal Display Controls
+    function openSecretAuthModal() {
+      const modal = document.getElementById("secret-auth-modal");
+      const input = document.getElementById("admin-pin-input");
+      const err = document.getElementById("admin-pin-error");
+      if (err) err.classList.add("hidden");
+      if (input) input.value = "";
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        setTimeout(() => { if (input) input.focus(); }, 150);
+      }
+    }
+
+    function closeSecretAuthModal() {
+      const modal = document.getElementById("secret-auth-modal");
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    }
+
+    function evaluateSecretPin() {
+      const input = document.getElementById("admin-pin-input");
+      const err = document.getElementById("admin-pin-error");
+      if (!input) return;
+
+      if (input.value.trim() === SECRET_PIN) {
+        closeSecretAuthModal();
+        authenticateAdminDirectly();
+      } else {
+        if (err) err.classList.remove("hidden");
+        input.value = "";
+        input.focus();
+      }
+    }
+
+    function authenticateAdminDirectly() {
+      isAdminAuthenticated = true;
+      const floatingBadge = document.getElementById("admin-floating-badge");
+      if (floatingBadge) {
+        floatingBadge.classList.remove("hidden");
+        floatingBadge.classList.add("flex");
+      }
+      showToastNotification("Admin Authenticated via Passkey 9999!");
+      openAdminCmsModal();
+    }
+
+    function deauthenticateAdmin() {
+      isAdminAuthenticated = false;
+      if (isInlineEditActive) toggleInlineEditMode();
+      const floatingBadge = document.getElementById("admin-floating-badge");
+      if (floatingBadge) {
+        floatingBadge.classList.add("hidden");
+        floatingBadge.classList.remove("flex");
+      }
+      closeAdminCmsModal();
+      showToastNotification("Administrator logged out.");
+    }
+
+    // =========================================================================
+    // INLINE VISUAL EDITING ENGINE
+    // =========================================================================
+    function toggleInlineEditMode() {
+      isInlineEditActive = !isInlineEditActive;
+      const label = document.getElementById("edit-mode-label");
+      const btn = document.getElementById("toggle-edit-mode-btn");
+
+      if (isInlineEditActive) {
+        document.body.classList.add("inline-edit-active");
+        if (label) label.textContent = "Edit Mode: ON";
+        if (btn) btn.className = "px-2.5 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition";
+        enableContentEditableAttributes(true);
+        showToastNotification("In-Place Editing Mode Activated! Click text on page to edit directly.");
+      } else {
+        document.body.classList.remove("inline-edit-active");
+        if (label) label.textContent = "Edit Mode: OFF";
+        if (btn) btn.className = "px-2.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition";
+        enableContentEditableAttributes(false);
+        saveInlineEditsToState();
+        showToastNotification("In-Place changes saved and applied!");
+      }
+    }
+
+    function enableContentEditableAttributes(enable) {
+      document.querySelectorAll("[data-editable]").forEach(el => {
+        el.contentEditable = enable ? "true" : "false";
+        if (enable) {
+          el.addEventListener("blur", handleInlineElementBlur);
+        } else {
+          el.removeEventListener("blur", handleInlineElementBlur);
+        }
+      });
+    }
+
+    function handleInlineElementBlur(e) {
+      const key = e.target.getAttribute("data-editable");
+      if (!key) return;
+      setNestedProperty(brochureData, key, e.target.innerText.trim());
+      saveDataToLocalStorage();
+    }
+
+    function saveInlineEditsToState() {
+      document.querySelectorAll("[data-editable]").forEach(el => {
+        const key = el.getAttribute("data-editable");
+        if (key) {
+          setNestedProperty(brochureData, key, el.innerText.trim());
+        }
+      });
+      saveDataToLocalStorage();
+    }
+
+    function setNestedProperty(obj, path, value) {
+      const parts = path.split('.');
+      let current = obj;
+      for (let i = 0; i < parts.length - 1; i++) {
+        if (!current[parts[i]]) current[parts[i]] = {};
+        current = current[parts[i]];
+      }
+      current[parts[parts.length - 1]] = value;
+    }
+
+    // =========================================================================
+    // DYNAMIC RENDERING CONTROLLER (BROCHURE SECTIONS)
+    // =========================================================================
+    function renderBrochureView() {
+      // 1. Hero & Branding
+      document.getElementById("live-hero-badge").textContent = brochureData.hero.badge;
+      document.getElementById("live-hero-title").textContent = brochureData.hero.title;
+      document.getElementById("live-hero-tagline").textContent = brochureData.hero.tagline;
+      document.getElementById("live-hero-description").textContent = brochureData.hero.description;
+
+      document.getElementById("live-college-badge-title").textContent = brochureData.institution.name;
+      document.getElementById("live-college-name").textContent = brochureData.institution.name;
+      document.getElementById("live-college-estd").textContent = brochureData.institution.subtitle;
+
+      document.getElementById("live-stat-vtu").innerHTML = `<strong>Affiliation:</strong> ${brochureData.institution.vtu.replace('Affiliation: ', '')}`;
+      document.getElementById("live-stat-aicte").innerHTML = `<strong>Statutory:</strong> ${brochureData.institution.aicte.replace('Statutory: ', '')}`;
+      document.getElementById("live-stat-nba").innerHTML = `<strong>NBA Accredited:</strong> ${brochureData.institution.nba.replace('NBA Accredited: ', '')}`;
+
+      // 2. Vision & Mission
+      document.getElementById("live-vision-text").textContent = brochureData.institution.vision;
+      const missionContainer = document.getElementById("live-mission-container");
+      missionContainer.innerHTML = brochureData.institution.mission.map(m => `
+        <div class="flex items-start gap-2">
+          <span class="text-gold-600 font-bold text-base leading-none">•</span>
+          <p class="leading-relaxed">${m}</p>
+        </div>
+      `).join('');
+
+      // 3. Thematic Tracks
+      const tracksContainer = document.getElementById("live-tracks-grid");
+      tracksContainer.innerHTML = brochureData.tracks.map((t, idx) => `
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-jce-600 transition space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-1 rounded-lg bg-jce-900 text-white font-mono font-bold text-xs">${t.code}</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${t.badgeColor}">${t.badge}</span>
+            </div>
+            <h4 class="text-base font-extrabold text-slate-900 leading-snug">${t.title}</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">${t.desc}</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
+            <strong>Target Compliance:</strong> ${t.compliance}
+          </div>
+        </div>
+      `).join('') + `
+        <div class="bg-gradient-to-br from-jce-900 to-slate-900 text-white rounded-2xl p-6 shadow-md space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+              <span>Official Compendium</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-1">2027 Faculty Research Compendium</h4>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+              All accepted, presented, and peer-reviewed articles will be cataloged with registered ISBN citations and indexed in academic institutional repositories.
+            </p>
+          </div>
+          <div class="pt-2">
+            <span class="inline-block px-3 py-1 bg-white/10 rounded-lg text-[10px] font-mono text-gold-300">
+              Ref: Faculty_Conclave_Publication_Handbook_v1
+            </span>
+          </div>
+        </div>
+      `;
+
+      // 4. Guidelines
+      const guidelinesContainer = document.getElementById("live-guidelines-grid");
+      guidelinesContainer.innerHTML = brochureData.guidelines.map(g => `
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="flex items-center gap-2 text-jce-800 font-bold text-sm">
+            <i data-lucide="${g.icon || 'file-text'}" class="w-4 h-4 text-jce-600"></i>
+            <span>${g.title}</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">${g.desc}</p>
+        </div>
+      `).join('');
+
+      // 5. Rubric
+      const rubricBody = document.getElementById("live-rubric-table-body");
+      rubricBody.innerHTML = brochureData.rubric.map(r => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="py-3.5 px-4 font-mono font-bold text-center text-slate-900">${r.num}</td>
+          <td class="py-3.5 px-4 font-bold text-slate-900">${r.param}</td>
+          <td class="py-3.5 px-4">${r.focus}</td>
+          <td class="py-3.5 px-4 font-mono font-bold text-center text-jce-800">${r.weight}</td>
+        </tr>
+      `).join('');
+
+      // 6. Deadlines
+      const deadlinesContainer = document.getElementById("live-deadlines-container");
+      deadlinesContainer.innerHTML = brochureData.deadlines.map(d => `
+        <div class="${d.highlight ? 'bg-white/10 border-2 border-gold-400' : 'bg-white/5 border border-white/10'} rounded-2xl p-4 space-y-2">
+          <span class="text-[10px] font-mono uppercase tracking-wider font-bold ${d.color}">${d.phase}</span>
+          <h4 class="text-xs font-extrabold text-white">${d.title}</h4>
+          <p class="text-lg font-black ${d.color}">${d.date}</p>
+          <p class="text-[11px] ${d.highlight ? 'text-slate-300' : 'text-slate-400'}">${d.desc}</p>
+        </div>
+      `).join('');
+
+      // 7. Committee & Leadership
+      const leadershipContainer = document.getElementById("live-leadership-container");
+      leadershipContainer.innerHTML = brochureData.committee.leadership.map(l => `
+        <div class="p-5 rounded-2xl ${l.highlight ? 'bg-amber-50/70 border border-gold-300' : 'bg-slate-50 border border-slate-200'} space-y-2">
+          <span class="px-2.5 py-0.5 rounded-full ${l.badgeClass} text-[10px] font-extrabold uppercase">${l.role}</span>
+          <h4 class="text-base font-black text-slate-900 pt-1">${l.name}</h4>
+          <p class="text-xs text-slate-600 font-medium">${l.title}</p>
+          <p class="text-[11px] ${l.highlight ? 'text-gold-700' : 'text-jce-700'} font-semibold">${l.inst}</p>
+        </div>
+      `).join('');
+
+      const deansContainer = document.getElementById("live-deans-container");
+      deansContainer.innerHTML = brochureData.committee.deans.map(d => `
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <h5 class="text-xs font-bold text-slate-900">${d.name}</h5>
+          <p class="text-[11px] text-slate-500">${d.title}</p>
+        </div>
+      `).join('');
+
+      const hodsContainer = document.getElementById("live-hods-container");
+      hodsContainer.innerHTML = brochureData.committee.hods.map(h => `
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+          <span class="text-[9px] font-bold ${h.tagClass} uppercase block">${h.tag}</span>
+          <p class="font-extrabold text-slate-900 mt-0.5">${h.name}</p>
+          <p class="text-[11px] text-slate-500">${h.title}</p>
+        </div>
+      `).join('');
+
+      // 8. Venue & Contacts
+      document.getElementById("live-venue-title").textContent = brochureData.venue.title;
+      document.getElementById("live-venue-desc").textContent = brochureData.venue.desc;
+      document.getElementById("live-venue-address").textContent = brochureData.venue.address;
+
+      document.getElementById("live-convener-name").textContent = brochureData.contact.convenerName;
+      document.getElementById("live-convener-role").textContent = brochureData.contact.convenerRole;
+      document.getElementById("live-convener-dept").textContent = brochureData.contact.convenerDept;
+      
+      const emailEl = document.getElementById("live-convener-email");
+      emailEl.textContent = brochureData.contact.email;
+      emailEl.href = `mailto:${brochureData.contact.email}`;
+
+      document.getElementById("live-convener-phone").textContent = brochureData.contact.phone;
+      
+      const webEl = document.getElementById("live-convener-web");
+      webEl.textContent = brochureData.contact.web;
+      webEl.href = brochureData.contact.web;
+
+      // 9. Registration URL & QR
+      document.getElementById("live-registration-desc").textContent = brochureData.registration.desc;
+      const regLink = document.getElementById("live-registration-link");
+      regLink.href = brochureData.registration.url;
+      document.getElementById("live-registration-url-text").textContent = brochureData.registration.url;
+
+      renderQrCode(brochureData.registration.url);
+
+      // 10. Logos
+      const logoSrc = brochureData.media?.logoSrc || "jce-logo.png";
+      ['live-logo-header', 'live-logo-hero', 'live-logo-footer'].forEach(id => {
+        const img = document.getElementById(id);
+        if (img) img.src = logoSrc;
+      });
+
+      // 11. Custom Content Blocks
+      const customSection = document.getElementById("custom-blocks-section");
+      const customGrid = document.getElementById("live-custom-blocks-grid");
+      if (brochureData.customBlocks && brochureData.customBlocks.length > 0) {
+        customSection.classList.remove("hidden");
+        customGrid.innerHTML = brochureData.customBlocks.map(b => `
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-900 text-[10px] font-bold uppercase tracking-wider">${b.badge}</span>
+            <h4 class="text-base font-extrabold text-slate-900">${b.title}</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">${b.desc}</p>
+          </div>
+        `).join('');
+      } else {
+        customSection.classList.add("hidden");
+      }
+
+      lucide.createIcons();
+    }
+
+    function renderQrCode(url) {
+      const qrTarget = document.getElementById("qrcode-container");
+      if (!qrTarget) return;
+      qrTarget.innerHTML = "";
+      new QRCode(qrTarget, {
+        text: url || "https://jce.ac.in",
+        width: 100,
+        height: 100,
+        colorDark: "#1e3a8a",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.M
+      });
+    }
+
+    // =========================================================================
+    // ADMIN CMS MODAL TAB & FORM CONTROLLERS
+    // =========================================================================
+    function openAdminCmsModal() {
+      populateCmsFormFields();
+      switchCmsTab('hero');
+      const modal = document.getElementById("admin-cms-modal");
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+      lucide.createIcons();
+    }
+
+    function closeAdminCmsModal() {
+      const modal = document.getElementById("admin-cms-modal");
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    }
+
+    function switchCmsTab(tabName) {
+      const tabs = ['hero', 'vision', 'tracks', 'guidelines', 'deadlines', 'committee', 'venue', 'branding', 'custom'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`cms-tab-${t}`);
+        const panel = document.getElementById(`cms-panel-${t}`);
+        if (t === tabName) {
+          if (btn) btn.className = "py-2 px-3 border-b-2 border-jce-700 text-jce-800 whitespace-nowrap cursor-pointer font-bold";
+          if (panel) panel.classList.remove("hidden");
+        } else {
+          if (btn) btn.className = "py-2 px-3 border-b-2 border-transparent hover:text-slate-900 text-slate-600 whitespace-nowrap cursor-pointer";
+          if (panel) panel.classList.add("hidden");
+        }
+      });
+      lucide.createIcons();
+    }
+
+    function populateCmsFormFields() {
+      // Hero
+      document.getElementById("cms-hero-badge").value = brochureData.hero.badge;
+      document.getElementById("cms-hero-title").value = brochureData.hero.title;
+      document.getElementById("cms-hero-tagline").value = brochureData.hero.tagline;
+      document.getElementById("cms-hero-desc").value = brochureData.hero.description;
+
+      document.getElementById("cms-stat-vtu").value = brochureData.institution.vtu;
+      document.getElementById("cms-stat-aicte").value = brochureData.institution.aicte;
+      document.getElementById("cms-stat-nba").value = brochureData.institution.nba;
+
+      // Vision & Mission
+      document.getElementById("cms-vision-text").value = brochureData.institution.vision;
+      renderCmsMissionList();
+
+      // Tracks
+      renderCmsTracksList();
+
+      // Guidelines & Rubric
+      renderCmsGuidelinesList();
+      renderCmsRubricList();
+
+      // Deadlines
+      renderCmsDeadlinesList();
+
+      // Committee
+      renderCmsCommitteeLists();
+
+      // Venue
+      document.getElementById("cms-venue-title").value = brochureData.venue.title;
+      document.getElementById("cms-venue-desc").value = brochureData.venue.desc;
+      document.getElementById("cms-venue-address").value = brochureData.venue.address;
+
+      document.getElementById("cms-contact-name").value = brochureData.contact.convenerName;
+      document.getElementById("cms-contact-role").value = brochureData.contact.convenerRole;
+      document.getElementById("cms-contact-email").value = brochureData.contact.email;
+      document.getElementById("cms-contact-phone").value = brochureData.contact.phone;
+
+      // Branding
+      document.getElementById("cms-logo-url").value = brochureData.media?.logoSrc || "";
+      document.getElementById("cms-reg-url").value = brochureData.registration.url;
+
+      // Custom
+      renderCmsCustomBlocksList();
+    }
+
+    // Dynamic Lists Rendering inside CMS
+    function renderCmsMissionList() {
+      const list = document.getElementById("cms-mission-list");
+      list.innerHTML = brochureData.institution.mission.map((m, idx) => `
+        <div class="flex items-center gap-2">
+          <input type="text" value="${m}" data-mission-idx="${idx}" class="flex-1 px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
+          <button type="button" onclick="deleteMissionItem(${idx})" class="p-2 text-rose-600 hover:bg-rose-50 rounded-lg cursor-pointer">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+          </button>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function addMissionItem() {
+      brochureData.institution.mission.push("New institutional mission objective.");
+      renderCmsMissionList();
+    }
+
+    function deleteMissionItem(idx) {
+      brochureData.institution.mission.splice(idx, 1);
+      renderCmsMissionList();
+    }
+
+    function renderCmsTracksList() {
+      const list = document.getElementById("cms-tracks-list");
+      list.innerHTML = brochureData.tracks.map((t, idx) => `
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <input type="text" value="${t.code}" data-track-code="${idx}" class="w-28 font-mono font-bold px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+              <input type="text" value="${t.badge}" data-track-badge="${idx}" class="w-28 px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <button type="button" onclick="deleteTrackItem(${idx})" class="text-rose-600 hover:text-rose-800 text-xs font-bold cursor-pointer">Delete</button>
+          </div>
+          <div>
+            <input type="text" value="${t.title}" data-track-title="${idx}" class="w-full font-bold px-3 py-1.5 border border-slate-300 rounded-lg text-xs" placeholder="Track Title">
+          </div>
+          <div>
+            <textarea rows="2" data-track-desc="${idx}" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs" placeholder="Track Description">${t.desc}</textarea>
+          </div>
+          <div>
+            <input type="text" value="${t.compliance}" data-track-comp="${idx}" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs text-slate-500" placeholder="Target Criteria">
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function addNewTrackItem() {
+      brochureData.tracks.push({
+        code: `Track ${brochureData.tracks.length + 1}`,
+        badge: "NBA Crit. X",
+        badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+        title: "New Academic Conference Track",
+        desc: "Description of core engineering themes, instructional delivery methods, and domain focus.",
+        compliance: "Target NBA and NAAC criteria alignment."
+      });
+      renderCmsTracksList();
+    }
+
+    function deleteTrackItem(idx) {
+      brochureData.tracks.splice(idx, 1);
+      renderCmsTracksList();
+    }
+
+    function renderCmsGuidelinesList() {
+      const list = document.getElementById("cms-guidelines-list");
+      list.innerHTML = brochureData.guidelines.map((g, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+          <input type="text" value="${g.title}" data-guide-title="${idx}" class="w-full font-bold px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+          <textarea rows="2" data-guide-desc="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">${g.desc}</textarea>
+        </div>
+      `).join('');
+    }
+
+    function renderCmsRubricList() {
+      const list = document.getElementById("cms-rubric-list");
+      list.innerHTML = brochureData.rubric.map((r, idx) => `
+        <div class="grid grid-cols-12 gap-2 bg-white p-2.5 rounded-xl border border-slate-200 items-center">
+          <div class="col-span-1 text-center font-bold font-mono">${r.num}</div>
+          <div class="col-span-4"><input type="text" value="${r.param}" data-rubric-param="${idx}" class="w-full font-bold px-2 py-1 border border-slate-300 rounded text-xs"></div>
+          <div class="col-span-5"><input type="text" value="${r.focus}" data-rubric-focus="${idx}" class="w-full px-2 py-1 border border-slate-300 rounded text-xs"></div>
+          <div class="col-span-2"><input type="text" value="${r.weight}" data-rubric-weight="${idx}" class="w-full font-mono text-center px-2 py-1 border border-slate-300 rounded text-xs"></div>
+        </div>
+      `).join('');
+    }
+
+    function renderCmsDeadlinesList() {
+      const list = document.getElementById("cms-deadlines-list");
+      list.innerHTML = brochureData.deadlines.map((d, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-4 gap-2 items-center">
+          <div><input type="text" value="${d.phase}" data-dead-phase="${idx}" class="w-full font-bold px-2 py-1.5 border border-slate-300 rounded-lg text-xs"></div>
+          <div><input type="text" value="${d.title}" data-dead-title="${idx}" class="w-full font-bold px-2 py-1.5 border border-slate-300 rounded-lg text-xs"></div>
+          <div><input type="text" value="${d.date}" data-dead-date="${idx}" class="w-full font-black text-jce-800 px-2 py-1.5 border border-slate-300 rounded-lg text-xs"></div>
+          <div class="flex items-center gap-2">
+            <input type="text" value="${d.desc}" data-dead-desc="${idx}" class="flex-1 px-2 py-1.5 border border-slate-300 rounded-lg text-xs">
+            <button type="button" onclick="deleteDeadlineItem(${idx})" class="text-rose-600 hover:text-rose-800 font-bold p-1 cursor-pointer">×</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addNewDeadlineItem() {
+      brochureData.deadlines.push({
+        phase: `Phase 0${brochureData.deadlines.length + 1}`,
+        title: "New Milestone",
+        date: "May 15, 2027",
+        desc: "Milestone description and author instructions.",
+        color: "text-blue-400"
+      });
+      renderCmsDeadlinesList();
+    }
+
+    function deleteDeadlineItem(idx) {
+      brochureData.deadlines.splice(idx, 1);
+      renderCmsDeadlinesList();
+    }
+
+    function renderCmsCommitteeLists() {
+      const leadList = document.getElementById("cms-leadership-list");
+      leadList.innerHTML = brochureData.committee.leadership.map((l, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <input type="text" value="${l.role}" data-lead-role="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Role">
+          <input type="text" value="${l.name}" data-lead-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Full Name">
+          <input type="text" value="${l.title}" data-lead-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Designation">
+        </div>
+      `).join('');
+
+      const deansList = document.getElementById("cms-deans-list");
+      deansList.innerHTML = brochureData.committee.deans.map((d, idx) => `
+        <div class="p-2.5 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <input type="text" value="${d.name}" data-dean-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs">
+          <input type="text" value="${d.title}" data-dean-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs">
+        </div>
+      `).join('');
+
+      const hodsList = document.getElementById("cms-hods-list");
+      hodsList.innerHTML = brochureData.committee.hods.map((h, idx) => `
+        <div class="p-2.5 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <input type="text" value="${h.name}" data-hod-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs">
+          <input type="text" value="${h.title}" data-hod-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs">
+          <input type="text" value="${h.tag}" data-hod-tag="${idx}" class="text-slate-500 px-2 py-1 border border-slate-300 rounded text-xs">
+        </div>
+      `).join('');
+    }
+
+    function renderCmsCustomBlocksList() {
+      const list = document.getElementById("cms-custom-blocks-list");
+      list.innerHTML = (brochureData.customBlocks || []).map((b, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+          <div class="flex items-center justify-between">
+            <input type="text" value="${b.badge}" data-block-badge="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs w-36">
+            <button type="button" onclick="deleteCustomBlock(${idx})" class="text-rose-600 hover:text-rose-800 text-xs font-bold cursor-pointer">Delete</button>
+          </div>
+          <input type="text" value="${b.title}" data-block-title="${idx}" class="w-full font-bold px-2.5 py-1.5 border border-slate-300 rounded text-xs">
+          <textarea rows="2" data-block-desc="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded text-xs">${b.desc}</textarea>
+        </div>
+      `).join('');
+    }
+
+    function addNewCustomBlock() {
+      if (!brochureData.customBlocks) brochureData.customBlocks = [];
+      brochureData.customBlocks.push({
+        id: `block-${Date.now()}`,
+        badge: "Announcement",
+        title: "New Session / Feature Title",
+        desc: "Description of special highlight, keynote, or workshop."
+      });
+      renderCmsCustomBlocksList();
+    }
+
+    function deleteCustomBlock(idx) {
+      brochureData.customBlocks.splice(idx, 1);
+      renderCmsCustomBlocksList();
+    }
+
+    // Media & Logo File Upload
+    function handleLogoFileUpload(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        brochureData.media = brochureData.media || {};
+        brochureData.media.logoSrc = e.target.result;
+        document.getElementById("cms-logo-preview").src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // =========================================================================
+    // SAVING, EXPORTING & PERSISTENCE
+    // =========================================================================
+    function saveAllCmsChanges() {
+      // Hero
+      brochureData.hero.badge = document.getElementById("cms-hero-badge").value.trim();
+      brochureData.hero.title = document.getElementById("cms-hero-title").value.trim();
+      brochureData.hero.tagline = document.getElementById("cms-hero-tagline").value.trim();
+      brochureData.hero.description = document.getElementById("cms-hero-desc").value.trim();
+
+      brochureData.institution.vtu = document.getElementById("cms-stat-vtu").value.trim();
+      brochureData.institution.aicte = document.getElementById("cms-stat-aicte").value.trim();
+      brochureData.institution.nba = document.getElementById("cms-stat-nba").value.trim();
+
+      // Vision & Mission
+      brochureData.institution.vision = document.getElementById("cms-vision-text").value.trim();
+      document.querySelectorAll("[data-mission-idx]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-mission-idx"), 10);
+        if (brochureData.institution.mission[idx] !== undefined) {
+          brochureData.institution.mission[idx] = input.value.trim();
+        }
+      });
+
+      // Tracks
+      document.querySelectorAll("[data-track-code]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-track-code"), 10);
+        if (brochureData.tracks[idx]) brochureData.tracks[idx].code = input.value.trim();
+      });
+      document.querySelectorAll("[data-track-badge]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-track-badge"), 10);
+        if (brochureData.tracks[idx]) brochureData.tracks[idx].badge = input.value.trim();
+      });
+      document.querySelectorAll("[data-track-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-track-title"), 10);
+        if (brochureData.tracks[idx]) brochureData.tracks[idx].title = input.value.trim();
+      });
+      document.querySelectorAll("[data-track-desc]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-track-desc"), 10);
+        if (brochureData.tracks[idx]) brochureData.tracks[idx].desc = input.value.trim();
+      });
+      document.querySelectorAll("[data-track-comp]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-track-comp"), 10);
+        if (brochureData.tracks[idx]) brochureData.tracks[idx].compliance = input.value.trim();
+      });
+
+      // Guidelines & Rubric
+      document.querySelectorAll("[data-guide-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-guide-title"), 10);
+        if (brochureData.guidelines[idx]) brochureData.guidelines[idx].title = input.value.trim();
+      });
+      document.querySelectorAll("[data-guide-desc]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-guide-desc"), 10);
+        if (brochureData.guidelines[idx]) brochureData.guidelines[idx].desc = input.value.trim();
+      });
+
+      document.querySelectorAll("[data-rubric-param]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-rubric-param"), 10);
+        if (brochureData.rubric[idx]) brochureData.rubric[idx].param = input.value.trim();
+      });
+      document.querySelectorAll("[data-rubric-focus]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-rubric-focus"), 10);
+        if (brochureData.rubric[idx]) brochureData.rubric[idx].focus = input.value.trim();
+      });
+      document.querySelectorAll("[data-rubric-weight]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-rubric-weight"), 10);
+        if (brochureData.rubric[idx]) brochureData.rubric[idx].weight = input.value.trim();
+      });
+
+      // Deadlines
+      document.querySelectorAll("[data-dead-phase]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dead-phase"), 10);
+        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].phase = input.value.trim();
+      });
+      document.querySelectorAll("[data-dead-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dead-title"), 10);
+        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].title = input.value.trim();
+      });
+      document.querySelectorAll("[data-dead-date]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dead-date"), 10);
+        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].date = input.value.trim();
+      });
+      document.querySelectorAll("[data-dead-desc]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dead-desc"), 10);
+        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].desc = input.value.trim();
+      });
+
+      // Committee
+      document.querySelectorAll("[data-lead-role]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-lead-role"), 10);
+        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].role = input.value.trim();
+      });
+      document.querySelectorAll("[data-lead-name]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-lead-name"), 10);
+        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].name = input.value.trim();
+      });
+      document.querySelectorAll("[data-lead-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-lead-title"), 10);
+        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].title = input.value.trim();
+      });
+
+      document.querySelectorAll("[data-dean-name]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dean-name"), 10);
+        if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].name = input.value.trim();
+      });
+      document.querySelectorAll("[data-dean-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-dean-title"), 10);
+        if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].title = input.value.trim();
+      });
+
+      document.querySelectorAll("[data-hod-name]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-hod-name"), 10);
+        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].name = input.value.trim();
+      });
+      document.querySelectorAll("[data-hod-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-hod-title"), 10);
+        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].title = input.value.trim();
+      });
+      document.querySelectorAll("[data-hod-tag]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-hod-tag"), 10);
+        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].tag = input.value.trim();
+      });
+
+      // Venue & Contacts
+      brochureData.venue.title = document.getElementById("cms-venue-title").value.trim();
+      brochureData.venue.desc = document.getElementById("cms-venue-desc").value.trim();
+      brochureData.venue.address = document.getElementById("cms-venue-address").value.trim();
+
+      brochureData.contact.convenerName = document.getElementById("cms-contact-name").value.trim();
+      brochureData.contact.convenerRole = document.getElementById("cms-contact-role").value.trim();
+      brochureData.contact.email = document.getElementById("cms-contact-email").value.trim();
+      brochureData.contact.phone = document.getElementById("cms-contact-phone").value.trim();
+
+      // Branding & QR
+      const logoUrlInput = document.getElementById("cms-logo-url").value.trim();
+      if (logoUrlInput) {
+        brochureData.media = brochureData.media || {};
+        brochureData.media.logoSrc = logoUrlInput;
+      }
+      brochureData.registration.url = document.getElementById("cms-reg-url").value.trim();
+
+      // Custom Blocks
+      document.querySelectorAll("[data-block-badge]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-block-badge"), 10);
+        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].badge = input.value.trim();
+      });
+      document.querySelectorAll("[data-block-title]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-block-title"), 10);
+        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].title = input.value.trim();
+      });
+      document.querySelectorAll("[data-block-desc]").forEach(input => {
+        const idx = parseInt(input.getAttribute("data-block-desc"), 10);
+        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].desc = input.value.trim();
+      });
+
+      saveDataToLocalStorage();
+      renderBrochureView();
+      closeAdminCmsModal();
+      showToastNotification("Brochure updated and persisted successfully!");
+    }
+
+    function saveDataToLocalStorage() {
+      localStorage.setItem("jce_conclave_brochure_data", JSON.stringify(brochureData));
+    }
+
+    function loadDataFromLocalStorage() {
+      const stored = localStorage.getItem("jce_conclave_brochure_data");
+      if (stored) {
+        try {
+          brochureData = JSON.parse(stored);
+        } catch (e) {
+          console.warn("Storage parse error; reverting to defaults:", e);
+        }
+      }
+    }
+
+    function resetBrochureDefaults() {
+      brochureData = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA));
+      saveDataToLocalStorage();
+      renderBrochureView();
+      populateCmsFormFields();
+      showToastNotification("All brochure contents reset to default configurations!");
+    }
+
+    function exportBrochureJsonConfig() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(brochureData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `JCE_Faculty_Conclave_Config_${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToastNotification("Configuration JSON exported.");
+    }
+
+    // =========================================================================
+    // REGISTRATION MODAL & TOAST UI
+    // =========================================================================
+    function openRegistrationModal() {
+      const modal = document.getElementById("registration-modal");
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+    }
+
+    function closeRegistrationModal() {
+      const modal = document.getElementById("registration-modal");
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    }
+
+    function handleRegistrationSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById("reg-name").value;
+      const dept = document.getElementById("reg-dept").value;
+      closeRegistrationModal();
+      showToastNotification(`Registration confirmed for ${name} (${dept})!`);
+    }
+
+    function showToastNotification(message) {
+      let toast = document.getElementById("brochure-toast");
+      if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "brochure-toast";
+        toast.className = "fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 text-xs font-semibold flex items-center gap-3 transition-transform duration-300 transform translate-y-24 max-w-sm";
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span><span>${message}</span>`;
+      toast.classList.remove("translate-y-24");
+      setTimeout(() => { toast.classList.add("translate-y-24"); }, 3800);
+    }
+
+    // =========================================================================
+    // INITIALIZATION LIFECYCLE
+    // =========================================================================
+    window.addEventListener("DOMContentLoaded", () => {
+      loadDataFromLocalStorage();
+      renderBrochureView();
+      setupTripleClickTriggers();
+      checkUrlQueryAuthentication();
+    });
+  </script>
+
+</body>
+</html>
