@@ -7,7 +7,7 @@
   
   <!-- Typography: Inter, Playfair Display, & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
@@ -93,7 +93,6 @@
         print-color-adjust: exact;
       }
 
-      /* Suppress admin bars, toolbars, and interaction modals during printing */
       #action-toolbar, #nav-sticky-header, #admin-floating-badge, 
       #secret-auth-modal, #admin-cms-modal, #registration-modal, 
       .no-print, [data-admin-only] {
@@ -155,13 +154,13 @@
           class="flex items-center gap-2.5 sm:gap-3 select-none cursor-pointer group min-w-0" 
           title="Jain College of Engineering (Triple-click for Admin Access)"
         >
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white p-1 border border-slate-200 shadow-xs flex items-center justify-center shrink-0 group-hover:border-gold-400 transition">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white p-1 border border-slate-200 shadow-xs flex items-center justify-center shrink-0 group-hover:border-gold-400 transition overflow-hidden">
             <img 
               id="live-logo-header"
               src="jce-logo.png" 
               alt="Jain College of Engineering Crest" 
               class="w-full h-full object-contain"
-              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+              onerror="this.onerror=null; this.src='https://placehold.co/120x120/1e3a8a/ffffff?text=JCE';"
             />
           </div>
           <div class="min-w-0">
@@ -181,14 +180,15 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold text-slate-700">
-          <a href="#hero" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Conclave</a>
-          <a href="#overview" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">About JCE</a>
-          <a href="#tracks" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Tracks</a>
-          <a href="#guidelines" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Author Policies</a>
-          <a href="#rubric" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Review Rubric</a>
-          <a href="#deadlines" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Schedule</a>
-          <a href="#committee" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Committee</a>
-          <a href="#venue" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Venue</a>
+          <a href="#hero" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Conclave</a>
+          <a href="#overview" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">About JCE</a>
+          <a href="#tracks" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Tracks</a>
+          <a href="#guidelines" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Author Policies</a>
+          <a href="#templates" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Templates</a>
+          <a href="#rubric" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Rubric</a>
+          <a href="#deadlines" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Schedule</a>
+          <a href="#committee" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Committee</a>
+          <a href="#venue" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 hover:text-jce-900 transition">Venue</a>
         </nav>
 
         <div class="flex items-center gap-2">
@@ -227,7 +227,7 @@
           </p>
 
           <p id="live-hero-description" data-editable="hero.description" class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl pt-1">
-            Faculty Conclave 2027 provides a premier collaborative platform dedicated to advancing engineering education, rigorous translational research, and institutional synergy among technical educators. Designed to bridge classroom pedagogical methodologies with accredited outcome metrics, this convention empowers university-level faculty to formulate agile instructional models and strengthen academic excellence across Tier-1 institutions.
+            Faculty Conclave 2027 provides a premier collaborative platform dedicated to advancing engineering education, rigorous translational research, and institutional synergy among technical educators.
           </p>
 
           <div class="pt-3 flex flex-wrap gap-3">
@@ -235,22 +235,22 @@
               <i data-lucide="layers" class="w-4 h-4"></i>
               <span>Explore Thematic Tracks</span>
             </a>
-            <a href="#guidelines" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition backdrop-blur-sm">
-              <i data-lucide="file-text" class="w-4 h-4 text-gold-400"></i>
-              <span>Publication Handbook v1</span>
+            <a href="#templates" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition backdrop-blur-sm">
+              <i data-lucide="download" class="w-4 h-4 text-gold-400"></i>
+              <span>Download Paper Templates</span>
             </a>
           </div>
         </div>
 
         <!-- Official Insignia & Accredited Identity Badge -->
         <div class="lg:col-span-4 bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-center space-y-4">
-          <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto p-2 bg-white rounded-2xl shadow-xl flex items-center justify-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto p-2 bg-white rounded-2xl shadow-xl flex items-center justify-center overflow-hidden">
             <img 
               id="live-logo-hero"
               src="jce-logo.png" 
               alt="JCE Insignia" 
               class="w-full h-full object-contain"
-              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+              onerror="this.onerror=null; this.src='https://placehold.co/120x120/1e3a8a/ffffff?text=JCE';"
             />
           </div>
           <div>
@@ -260,7 +260,7 @@
           <div class="pt-2 border-t border-white/10 space-y-2 text-xs text-slate-300 text-left">
             <div class="flex items-center gap-2">
               <i data-lucide="award" class="w-4 h-4 text-gold-400 shrink-0"></i>
-              <span id="live-stat-vtu" data-editable="institution.vtu"><strong>Affiliation:</strong> VTU-Belagavu</span>
+              <span id="live-stat-vtu" data-editable="institution.vtu"><strong>Affiliation:</strong> VTU-Belagavi</span>
             </div>
             <div class="flex items-center gap-2">
               <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
@@ -307,9 +307,7 @@
             <i data-lucide="compass" class="w-5 h-5 text-gold-600"></i>
             <span>College Mission</span>
           </div>
-          <div id="live-mission-container" class="space-y-1.5 text-slate-700 text-xs sm:text-sm leading-relaxed">
-            <!-- Dynamically Rendered Mission Points -->
-          </div>
+          <div id="live-mission-container" class="space-y-1.5 text-slate-700 text-xs sm:text-sm leading-relaxed"></div>
         </div>
       </div>
 
@@ -346,9 +344,7 @@
         </p>
       </div>
 
-      <div id="live-tracks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Dynamically Rendered Tracks -->
-      </div>
+      <div id="live-tracks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
     <!-- 4. PUBLICATION & IEEE SPECIFICATIONS -->
@@ -365,12 +361,34 @@
         </p>
       </div>
 
-      <div id="live-guidelines-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Dynamically Populated Guidelines -->
+      <div id="live-guidelines-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- 5. ARTICLE SUBMISSION TEMPLATES & DOWNLOADS -->
+    <section id="templates" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            Author Resource Kit
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+            Article Submission Templates
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1">
+            Download certified conference templates formatted for peer review compliance.
+          </p>
+        </div>
+        <span class="text-xs font-mono font-bold bg-slate-100 px-3 py-1.5 rounded-xl text-slate-600 self-start sm:self-auto">
+          IEEE Standard Format (A4)
+        </span>
+      </div>
+
+      <div id="live-templates-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Dynamically Loaded Templates -->
       </div>
     </section>
 
-    <!-- 5. 5-PARAMETER PEER REVIEW RUBRIC -->
+    <!-- 6. 5-PARAMETER PEER REVIEW RUBRIC -->
     <section id="rubric" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6 page-break-inside-avoid">
       <div>
         <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
@@ -394,9 +412,7 @@
               <th class="py-3.5 px-4 w-28 text-center">Weightage</th>
             </tr>
           </thead>
-          <tbody id="live-rubric-table-body" class="divide-y divide-slate-200 text-slate-700 font-medium">
-            <!-- Dynamically Loaded Rubric Rows -->
-          </tbody>
+          <tbody id="live-rubric-table-body" class="divide-y divide-slate-200 text-slate-700 font-medium"></tbody>
         </table>
       </div>
 
@@ -440,7 +456,7 @@
       </div>
     </section>
 
-    <!-- 6. KEY DEADLINES & SCHEDULE -->
+    <!-- 7. KEY DEADLINES & SCHEDULE -->
     <section id="deadlines" class="bg-gradient-to-br from-slate-900 to-jce-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800 page-break-inside-avoid">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-800 pb-5 gap-3">
         <div>
@@ -454,13 +470,11 @@
         <div class="text-xs text-slate-400 font-mono">Academic Year 2026–2027</div>
       </div>
 
-      <div id="live-deadlines-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-6">
-        <!-- Dynamically Loaded Deadlines -->
-      </div>
+      <div id="live-deadlines-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-6"></div>
     </section>
 
-    <!-- 7. ORGANIZING COMMITTEE & LEADERSHIP -->
-    <section id="committee" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8 page-break-before">
+    <!-- 8. ORGANIZING COMMITTEE & LEADERSHIP (SEGREGATED) -->
+    <section id="committee" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-10 page-break-before">
       <div>
         <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
           Governance & Steering Body
@@ -469,33 +483,46 @@
           Organizing Committee & Leadership
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-1">
-          Leadership, academic deans, and department heads of Jain College of Engineering, Belagavi.
+          Executive leadership, patrons, institutional deans, and academic chairs of Jain College of Engineering, Belagavi.
         </p>
       </div>
 
-      <!-- Leadership Row -->
-      <div id="live-leadership-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Dynamically Rendered Leadership Cards -->
+      <!-- Component 8A: Dedicated Patrons Section -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+          <i data-lucide="crown" class="w-4 h-4 text-gold-600"></i>
+          <h4 class="text-xs font-black uppercase tracking-wider text-slate-900">Chief Patrons & Institutional Governance</h4>
+        </div>
+        <div id="live-patrons-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically Loaded Patrons -->
+        </div>
       </div>
 
-      <!-- Deans Row -->
-      <div>
-        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">Institutional Deans & Quality Assurance</h4>
-        <div id="live-deans-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Dynamically Loaded Deans -->
+      <!-- Component 8B: Dedicated Chief Conveners Section -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+          <i data-lucide="award" class="w-4 h-4 text-jce-600"></i>
+          <h4 class="text-xs font-black uppercase tracking-wider text-slate-900">Chief Conveners & Secretariat Directorate</h4>
         </div>
+        <div id="live-conveners-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically Loaded Conveners -->
+        </div>
+      </div>
+
+      <!-- Institutional Deans -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500">Institutional Deans & Quality Assurance</h4>
+        <div id="live-deans-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"></div>
       </div>
 
       <!-- Department Heads Listing -->
-      <div>
-        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">Department Heads & Allied Academic Chairs</h4>
-        <div id="live-hods-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
-          <!-- Dynamically Loaded HODs -->
-        </div>
+      <div class="space-y-3">
+        <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500">Department Heads & Allied Academic Chairs</h4>
+        <div id="live-hods-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
       </div>
     </section>
 
-    <!-- 8. VENUE, CONNECTIVITY & CONVENER SECRETARIAT -->
+    <!-- 9. VENUE, CONNECTIVITY & CONVENER SECRETARIAT -->
     <section id="venue" class="grid grid-cols-1 lg:grid-cols-12 gap-8 page-break-inside-avoid">
       <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
         <div>
@@ -527,21 +554,21 @@
                 <i data-lucide="plane" class="w-3.5 h-3.5"></i>
                 <span>Airport (IXG)</span>
               </div>
-              <p class="text-[11px] text-slate-500">Belagavi Sambra Airport: ~18 km. Regular flights from Bengaluru, Mumbai, Delhi & Hyderabad.</p>
+              <p class="text-[11px] text-slate-500">Belagavi Sambra Airport: ~18 km. Daily connections to Bengaluru, Mumbai, and Delhi.</p>
             </div>
             <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
               <div class="flex items-center gap-1.5 text-blue-800 font-bold mb-1">
                 <i data-lucide="train" class="w-3.5 h-3.5"></i>
                 <span>Railway Terminal</span>
               </div>
-              <p class="text-[11px] text-slate-500">Belagavi Railway Station (BGM): ~8 km with city bus and taxi connections.</p>
+              <p class="text-[11px] text-slate-500">Belagavi Railway Station (BGM): ~8 km with city shuttle and bus connections.</p>
             </div>
             <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
               <div class="flex items-center gap-1.5 text-blue-800 font-bold mb-1">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
                 <span>Highway Access</span>
               </div>
-              <p class="text-[11px] text-slate-500">Directly accessible via NH 48 (Pune-Bengaluru corridor) with bypass routes to Machhe.</p>
+              <p class="text-[11px] text-slate-500">Directly connected via NH 48 (Pune-Bengaluru corridor) with bypass routes to Machhe.</p>
             </div>
           </div>
         </div>
@@ -584,7 +611,7 @@
       </div>
     </section>
 
-    <!-- 9. DYNAMIC CUSTOM CONTENT BLOCKS (ADMIN INJECTED) -->
+    <!-- 10. DYNAMIC CUSTOM CONTENT BLOCKS -->
     <section id="custom-blocks-section" class="space-y-6 hidden">
       <div class="text-center max-w-2xl mx-auto space-y-1">
         <span class="text-xs font-black uppercase tracking-wider text-jce-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
@@ -592,12 +619,10 @@
         </span>
         <h3 class="text-2xl font-black text-slate-900">Institutional Spotlights</h3>
       </div>
-      <div id="live-custom-blocks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Admin-Created Dynamic Cards -->
-      </div>
+      <div id="live-custom-blocks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
-    <!-- 10. REGISTRATION & QR CODE SECTION -->
+    <!-- 11. REGISTRATION & QR CODE SECTION -->
     <section id="registration" class="bg-white rounded-3xl p-6 sm:p-10 border-2 border-jce-900 shadow-xl space-y-8 page-break-inside-avoid">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         <div class="md:col-span-8 space-y-4">
@@ -636,11 +661,16 @@
           </p>
         </div>
 
+        <!-- Designated Public Display for Official Registration QR Code -->
         <div class="md:col-span-4 bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center justify-center space-y-3">
-          <div id="qrcode-container" class="p-3 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center"></div>
+          <div id="live-qrcode-wrapper" class="p-3 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center w-36 h-36 relative overflow-hidden">
+            <!-- Rendered QR (Custom Upload or Dynamic Generator) -->
+            <img id="live-custom-qr-img" class="hidden w-full h-full object-contain" alt="Registration QR Code" />
+            <div id="qrcode-container" class="w-full h-full flex items-center justify-center"></div>
+          </div>
           <div>
             <p class="text-xs font-bold text-slate-900">Scan to Register</p>
-            <p class="text-[10px] text-slate-500">Direct camera link for rapid mobile submission</p>
+            <p id="live-qr-caption" class="text-[10px] text-slate-500">Official Mobile Access Portal</p>
           </div>
         </div>
       </div>
@@ -656,13 +686,13 @@
           class="flex items-center gap-3 select-none cursor-pointer group" 
           title="Footer Seal (Triple-click for Admin Access)"
         >
-          <div class="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 group-hover:ring-2 group-hover:ring-gold-400 transition">
+          <div class="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 group-hover:ring-2 group-hover:ring-gold-400 transition overflow-hidden">
             <img 
               id="live-logo-footer"
               src="jce-logo.png" 
               alt="JCE Logo" 
               class="w-full h-full object-contain"
-              onerror="this.onerror=null; this.src='jce-logo.jpg';"
+              onerror="this.onerror=null; this.src='https://placehold.co/120x120/1e3a8a/ffffff?text=JCE';"
             />
           </div>
           <div>
@@ -819,11 +849,15 @@
         <button onclick="switchCmsTab('hero')" id="cms-tab-hero" class="py-2 px-3 border-b-2 border-jce-700 text-jce-800 whitespace-nowrap cursor-pointer">Hero & Banner</button>
         <button onclick="switchCmsTab('vision')" id="cms-tab-vision" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Vision & Mission</button>
         <button onclick="switchCmsTab('tracks')" id="cms-tab-tracks" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Thematic Tracks</button>
+        <button onclick="switchCmsTab('templates')" id="cms-tab-templates" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Article Templates</button>
         <button onclick="switchCmsTab('guidelines')" id="cms-tab-guidelines" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Guidelines & Rubric</button>
         <button onclick="switchCmsTab('deadlines')" id="cms-tab-deadlines" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Key Deadlines</button>
-        <button onclick="switchCmsTab('committee')" id="cms-tab-committee" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Committee Roster</button>
+        <button onclick="switchCmsTab('patrons')" id="cms-tab-patrons" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Patrons</button>
+        <button onclick="switchCmsTab('conveners')" id="cms-tab-conveners" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Chief Conveners</button>
+        <button onclick="switchCmsTab('faculty')" id="cms-tab-faculty" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Faculty & Chairs</button>
         <button onclick="switchCmsTab('venue')" id="cms-tab-venue" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Venue & Contact</button>
         <button onclick="switchCmsTab('branding')" id="cms-tab-branding" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Branding & Logo</button>
+        <button onclick="switchCmsTab('qr')" id="cms-tab-qr" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">QR Code Upload</button>
         <button onclick="switchCmsTab('custom')" id="cms-tab-custom" class="py-2 px-3 border-b-2 border-transparent hover:text-slate-900 whitespace-nowrap cursor-pointer">Custom Blocks</button>
       </div>
 
@@ -894,7 +928,59 @@
           <div id="cms-tracks-list" class="space-y-4"></div>
         </div>
 
-        <!-- TAB 4: GUIDELINES & RUBRIC -->
+        <!-- TAB 4: ARTICLE TEMPLATE REPOSITORY (ENHANCEMENT 5) -->
+        <div id="cms-panel-templates" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-black text-slate-900">Author Article Templates & Version Control</h4>
+              <p class="text-slate-500 text-[11px]">Upload Word (.docx), PDF (.pdf), or LaTeX (.zip/.tex) submission templates.</p>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-3">
+            <h5 class="font-extrabold text-slate-800">Upload New Template or Update Version</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Template Format / Title</label>
+                <input type="text" id="cms-template-name" placeholder="e.g. IEEE Word Template" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Version Tag</label>
+                <input type="text" id="cms-template-version" placeholder="e.g. v2.1" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Select File (Max 8MB)</label>
+                <input 
+                  type="file" 
+                  id="cms-template-file"
+                  accept=".docx,.doc,.pdf,.zip,.tar.gz,.tex"
+                  class="w-full text-xs file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700 file:font-semibold"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Template Notes / Specifications</label>
+              <input type="text" id="cms-template-notes" placeholder="e.g. Includes standard 2-column layout, biography section, and IEEE reference style." class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs">
+            </div>
+            <div class="flex justify-end pt-1">
+              <button 
+                type="button" 
+                onclick="handleTemplateUploadCommit()"
+                class="px-4 py-2 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 cursor-pointer"
+              >
+                <i data-lucide="upload-cloud" class="w-4 h-4 text-gold-400"></i>
+                <span>Register & Store Template</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h5 class="font-extrabold text-slate-800 text-xs">Active Registered Templates</h5>
+            <div id="cms-templates-list" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- TAB 5: GUIDELINES & RUBRIC -->
         <div id="cms-panel-guidelines" class="hidden space-y-6">
           <div class="space-y-3">
             <h4 class="text-sm font-black text-slate-900">Publication Handbook & Regulatory Rules</h4>
@@ -907,7 +993,7 @@
           </div>
         </div>
 
-        <!-- TAB 5: KEY DEADLINES -->
+        <!-- TAB 6: KEY DEADLINES -->
         <div id="cms-panel-deadlines" class="hidden space-y-4">
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-slate-900">Key Deadlines & Schedule Milestones</h4>
@@ -918,23 +1004,49 @@
           <div id="cms-deadlines-list" class="space-y-3"></div>
         </div>
 
-        <!-- TAB 6: COMMITTEE ROSTER -->
-        <div id="cms-panel-committee" class="hidden space-y-6">
-          <div class="space-y-3">
-            <h4 class="text-sm font-black text-slate-900">Chief Conveners & Patrons</h4>
-            <div id="cms-leadership-list" class="space-y-3"></div>
+        <!-- TAB 7: DEDICATED PATRONS SECTION (ENHANCEMENT 1) -->
+        <div id="cms-panel-patrons" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-black text-slate-900">Dedicated Patrons Management</h4>
+              <p class="text-slate-500 text-[11px]">Manage Chief Patrons, Academic Chancellors, and Executive Directors.</p>
+            </div>
+            <button type="button" onclick="addNewPatronItem()" class="px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold cursor-pointer">
+              + Add Patron
+            </button>
           </div>
-          <div class="space-y-3 pt-3 border-t border-slate-200">
+          <div id="cms-patrons-list" class="space-y-4"></div>
+        </div>
+
+        <!-- TAB 8: DEDICATED CHIEF CONVENERS SECTION (ENHANCEMENT 1) -->
+        <div id="cms-panel-conveners" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-black text-slate-900">Chief Conveners & Secretariat Directorate</h4>
+              <p class="text-slate-500 text-[11px]">Independent committee component for Conveners, Co-Conveners, and Organizers.</p>
+            </div>
+            <button type="button" onclick="addNewConvenerItem()" class="px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white rounded-xl text-xs font-bold cursor-pointer">
+              + Add Convener
+            </button>
+          </div>
+          <div id="cms-conveners-list" class="space-y-4"></div>
+        </div>
+
+        <!-- TAB 9: FACULTY PHOTO UPLOADS & CHAIRS (ENHANCEMENT 4) -->
+        <div id="cms-panel-faculty" class="hidden space-y-6">
+          <div>
             <h4 class="text-sm font-black text-slate-900">Institutional Deans & Quality Assurance</h4>
+            <p class="text-[11px] text-slate-500 mb-2">Upload high-resolution faculty portraits (PNG/JPG, Max 1.5 MB).</p>
             <div id="cms-deans-list" class="space-y-3"></div>
           </div>
-          <div class="space-y-3 pt-3 border-t border-slate-200">
+          
+          <div class="pt-3 border-t border-slate-200">
             <h4 class="text-sm font-black text-slate-900">Department Heads & Allied Academic Chairs</h4>
-            <div id="cms-hods-list" class="space-y-3"></div>
+            <div id="cms-hods-list" class="space-y-3 mt-2"></div>
           </div>
         </div>
 
-        <!-- TAB 7: VENUE & CONTACT -->
+        <!-- TAB 10: VENUE & CONTACT -->
         <div id="cms-panel-venue" class="space-y-4 hidden">
           <h4 class="text-sm font-black text-slate-900">Venue & Secretariat Contact Particulars</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -971,33 +1083,80 @@
           </div>
         </div>
 
-        <!-- TAB 8: BRANDING & LOGO -->
+        <!-- TAB 11: BRANDING & COLLEGE LOGO (ENHANCEMENT 2 - BUG RESOLVED) -->
         <div id="cms-panel-branding" class="space-y-4 hidden">
-          <h4 class="text-sm font-black text-slate-900">Institutional Crest & QR Portal Link</h4>
-          <div>
-            <label class="block font-bold text-slate-700 uppercase mb-1">Upload College Logo (PNG/JPG file)</label>
-            <div class="flex items-center gap-3">
-              <input 
-                type="file" 
-                id="cms-logo-file" 
-                accept="image/png, image/jpeg" 
-                onchange="handleLogoFileUpload(this)"
-                class="text-xs file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:bg-blue-50 file:text-blue-700 file:font-bold cursor-pointer"
-              />
-              <img id="cms-logo-preview" src="jce-logo.png" alt="Preview" class="w-10 h-10 object-contain p-0.5 border border-slate-300 rounded-lg">
+          <h4 class="text-sm font-black text-slate-900">Institutional Crest & College Logo Configuration</h4>
+          <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-4">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Upload College Logo (PNG, JPG, SVG, WebP · Max 2MB)</label>
+              <div class="flex items-center gap-4">
+                <input 
+                  type="file" 
+                  id="cms-logo-file-input" 
+                  accept="image/png, image/jpeg, image/svg+xml, image/webp" 
+                  onchange="handleLogoFileUploadEnhanced(this)"
+                  class="text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-jce-50 file:text-jce-700 file:font-bold cursor-pointer"
+                />
+                <div class="w-14 h-14 p-1 rounded-xl border border-slate-300 bg-white flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <img id="cms-logo-preview" src="jce-logo.png" alt="Logo Preview" class="w-full h-full object-contain">
+                </div>
+              </div>
+              <p id="cms-logo-feedback" class="text-[11px] text-slate-500 mt-1.5 flex items-center gap-1"></p>
             </div>
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 uppercase mb-1">Or Direct Logo Image URL</label>
-            <input type="text" id="cms-logo-url" placeholder="https://..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs">
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 uppercase mb-1">Online Registration URL (Generates QR Code)</label>
-            <input type="url" id="cms-reg-url" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-mono">
+
+            <div class="pt-2 border-t border-slate-100">
+              <label class="block font-bold text-slate-700 uppercase mb-1">Or Direct Web Image URL</label>
+              <input 
+                type="text" 
+                id="cms-logo-url" 
+                placeholder="https://jce.ac.in/assets/logo.png" 
+                class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-mono"
+                oninput="handleLogoUrlInput(this.value)"
+              >
+            </div>
           </div>
         </div>
 
-        <!-- TAB 9: CUSTOM CONTENT BLOCKS -->
+        <!-- TAB 12: REGISTRATION QR CODE UPLOAD (ENHANCEMENT 3) -->
+        <div id="cms-panel-qr" class="space-y-4 hidden">
+          <h4 class="text-sm font-black text-slate-900">Event Registration QR Code Customization</h4>
+          <p class="text-slate-500 text-[11px]">Upload an official institutional registration QR badge, or specify a custom URL for the real-time generator.</p>
+
+          <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-4">
+            <div>
+              <label class="block font-bold text-slate-700 uppercase mb-1">Upload QR Code Image (PNG, JPG, SVG, WebP · Max 2MB)</label>
+              <div class="flex items-center gap-4">
+                <input 
+                  type="file" 
+                  id="cms-qr-file-input" 
+                  accept="image/png, image/jpeg, image/svg+xml, image/webp" 
+                  onchange="handleQrFileUploadEnhanced(this)"
+                  class="text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-jce-50 file:text-jce-700 file:font-bold cursor-pointer"
+                />
+                <div class="w-16 h-16 p-1 rounded-xl border border-slate-300 bg-white flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <img id="cms-qr-preview" class="w-full h-full object-contain" alt="QR Preview" />
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <button 
+                  type="button" 
+                  onclick="revertToDynamicQr()"
+                  class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[10px] font-bold rounded-lg cursor-pointer"
+                >
+                  Use Auto-Generated Vector QR Instead
+                </button>
+              </div>
+              <p id="cms-qr-feedback" class="text-[11px] text-slate-500 mt-1"></p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100">
+              <label class="block font-bold text-slate-700 uppercase mb-1">Online Registration URL (For Vector Generator & Direct Links)</label>
+              <input type="url" id="cms-reg-url" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-xl text-xs font-mono">
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 13: CUSTOM CONTENT BLOCKS -->
         <div id="cms-panel-custom" class="space-y-4 hidden">
           <div class="flex items-center justify-between">
             <h4 class="text-sm font-black text-slate-900">Custom Content Cards & Institutional Spotlights</h4>
@@ -1128,7 +1287,7 @@
 
   <script>
     // =========================================================================
-    // BROCHURE CORE DATA STRUCTURE & FACTORY DEFAULTS
+    // ENHANCED DEFAULT BROCHURE DATA MODEL WITH COMPLETE ROSTER SEPARATION
     // =========================================================================
     const DEFAULT_BROCHURE_DATA = {
       hero: {
@@ -1140,7 +1299,7 @@
       institution: {
         name: "Jain College of Engineering",
         subtitle: "Estd. 2010 · Belagavi, Karnataka",
-        vtu: "Affiliation: VTU-Belagavu",
+        vtu: "Affiliation: VTU-Belagavi",
         aicte: "Statutory: Approved by AICTE, New Delhi",
         nba: "NBA Accredited: CSE & ECE Departments",
         vision: '"To emerge as a premier technical institution of excellence, imparting transformative engineering education, fostering ethical leadership, and inspiring cutting-edge research to serve societal and global technological challenges."',
@@ -1196,6 +1355,35 @@
           compliance: "NBA Criterion 9 (Student Support) & Criterion 3 (OBE Assessment)."
         }
       ],
+      templates: [
+        {
+          id: "tmpl-ieee-doc",
+          title: "IEEE Double-Column Word Format",
+          format: "DOCX",
+          version: "v2.4",
+          updated: "2026-09",
+          notes: "Official Microsoft Word A4 layout with pre-styled typography, headings, and tables.",
+          dataUrl: "" 
+        },
+        {
+          id: "tmpl-ieee-tex",
+          title: "LaTeX Authoring Package",
+          format: "LATEX / ZIP",
+          version: "v3.1",
+          updated: "2026-09",
+          notes: "Includes IEEEtran.cls, sample .tex bibliography templates, and vector figure guidelines.",
+          dataUrl: ""
+        },
+        {
+          id: "tmpl-author-guide-pdf",
+          title: "Author Instructions & Rubric PDF",
+          format: "PDF",
+          version: "v1.2",
+          updated: "2026-08",
+          notes: "Complete diagnostic guidelines, ethics code, and evaluation score bands.",
+          dataUrl: ""
+        }
+      ],
       guidelines: [
         {
           icon: "layout-grid",
@@ -1242,29 +1430,67 @@
         { phase: "Phase 04", title: "Camera-Ready Copy", date: "May 10, 2027", desc: "Final manuscript revisions & signed copyright forms.", color: "text-amber-400" },
         { phase: "Main Event", title: "Conclave Dates", date: "May 28–29, 2027", desc: "Keynote presentations, paper sessions & awards.", color: "text-gold-300", highlight: true }
       ],
+      // Segregated Committee Architecture
       committee: {
-        leadership: [
-          { role: "Patron & Director", name: "Dr. J. Shivakumar", title: "Principal & Director", inst: "Jain College of Engineering, Belagavi", badgeClass: "bg-blue-100 text-jce-900" },
-          { role: "Conclave Convener", name: "Dr. Shivkumar Math", title: "Professor & Head, Dept. of Physics", inst: "Convener · Faculty Conclave 2027", badgeClass: "bg-gold-200 text-gold-950", highlight: true },
-          { role: "Co-Convener", name: "Dr. Rajashekharagouda C. Patil", title: "Professor & Dean Academics", inst: "Jain College of Engineering, Belagavi", badgeClass: "bg-blue-100 text-jce-900" }
+        patrons: [
+          { 
+            name: "Dr. J. Shivakumar", 
+            role: "Patron & Director", 
+            title: "Principal & Director", 
+            org: "Jain College of Engineering, Belagavi", 
+            email: "principal@jce.ac.in", 
+            phone: "+91 831 2411192", 
+            photo: "" 
+          },
+          { 
+            name: "Dr. Chenraj Roychand", 
+            role: "Chief Patron", 
+            title: "Founder Chairman", 
+            org: "JGI Group Global", 
+            email: "chairman@jgi.ac.in", 
+            phone: "+91 80 4343 0100", 
+            photo: "" 
+          }
+        ],
+        conveners: [
+          { 
+            name: "Dr. Shivkumar Math", 
+            role: "Conclave Convener", 
+            title: "Professor & Head, Dept. of Physics", 
+            inst: "Jain College of Engineering, Belagavi", 
+            email: "conclave2027@jce.ac.in", 
+            phone: "+91 94481 00000", 
+            photo: "", 
+            highlight: true 
+          },
+          { 
+            name: "Dr. Rajashekharagouda C. Patil", 
+            role: "Co-Convener", 
+            title: "Professor & Dean Academics", 
+            inst: "Jain College of Engineering, Belagavi", 
+            email: "dean.academics@jce.ac.in", 
+            phone: "+91 831 2411192", 
+            photo: "", 
+            highlight: false 
+          }
         ],
         deans: [
-          { name: "Dr. Sanjeev Sangami", title: "Dean, Innovation, Consultancy & Entr." },
-          { name: "Dr. Venkatratnam C. Chitturi", title: "Professor & Dean, R&D" },
-          { name: "Dr. Raghavendra P. Bakale", title: "IQAC Coordinator" },
-          { name: "Dr. Jayashree Rudagi", title: "Senior Professor" }
+          { name: "Dr. Sanjeev Sangami", title: "Dean, Innovation, Consultancy & Entr.", photo: "" },
+          { name: "Dr. Venkatratnam C. Chitturi", title: "Professor & Dean, R&D", photo: "" },
+          { name: "Dr. Raghavendra P. Bakale", title: "IQAC Coordinator", photo: "" },
+          { name: "Dr. Jayashree Rudagi", title: "Senior Professor", photo: "" }
         ],
         hods: [
-          { name: "Dr. Uttam Patil", title: "Professor & Head, CSE", tag: "NBA Accredited Department", tagClass: "text-blue-700" },
-          { name: "Prof. Vinay Kumar R. Bagali", title: "Professor & Head, ECE", tag: "NBA Accredited Department", tagClass: "text-blue-700" },
-          { name: "Dr. Sachin Kumar", title: "Professor & Head, AI & ML", tag: "Emerging Tech", tagClass: "text-slate-400" },
-          { name: "Dr. Basavaraj Hubballi", title: "Professor & Head, Mechanical Engg.", tag: "Core Engineering", tagClass: "text-slate-400" },
-          { name: "Dr. Mithun B. M.", title: "Professor & Head, Civil Engg.", tag: "Core Engineering", tagClass: "text-slate-400" },
-          { name: "Dr. Mallikarjuna G. D.", title: "Professor & Head, EEE", tag: "Core Engineering", tagClass: "text-slate-400" },
-          { name: "Dr. Manuprasad B. K.", title: "Professor & Head, Chemistry", tag: "Basic Sciences", tagClass: "text-slate-400" },
-          { name: "Dr. Prashant Patil", title: "Professor & Head, Mathematics", tag: "Basic Sciences", tagClass: "text-slate-400" },
-          { name: "Dr. Rohitraj S. Jain", title: "Professor & Head, MBA", tag: "Postgraduate Studies", tagClass: "text-slate-400" },
-          { name: "Dr. Praveen Bansode", title: "Professor & Head, MCA", tag: "Postgraduate Studies", tagClass: "text-slate-400" }
+          { name: "Dr. Uttam Patil", title: "Professor & Head, CSE", tag: "NBA Accredited Department", tagClass: "text-blue-700", photo: "" },
+          { name: "Prof. Vinay Kumar R. Bagali", title: "Professor & Head, ECE", tag: "NBA Accredited Department", tagClass: "text-blue-700", photo: "" },
+          { name: "Dr. Sachin Kumar", title: "Professor & Head, AI & ML", tag: "Emerging Tech", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Basavaraj Hubballi", title: "Professor & Head, Mechanical Engg.", tag: "Core Engineering", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Mithun B. M.", title: "Professor & Head, Civil Engg.", tag: "Core Engineering", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Mallikarjuna G. D.", title: "Professor & Head, EEE", tag: "Core Engineering", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Manuprasad B. K.", title: "Professor & Head, Chemistry", tag: "Basic Sciences", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Prashant Patil", title: "Professor & Head, Mathematics", tag: "Basic Sciences", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Rohitraj S. Jain", title: "Professor & Head, MBA", tag: "Postgraduate Studies", tagClass: "text-slate-400", photo: "" },
+          { name: "Dr. Praveen Bansode", title: "Professor & Head, MCA", tag: "Postgraduate Studies", tagClass: "text-slate-400", photo: "" }
         ]
       },
       venue: {
@@ -1282,7 +1508,8 @@
       },
       registration: {
         desc: "Faculty members, researchers, and academic leaders from AICTE-approved and university-affiliated technical institutions are invited to participate. Registration includes admission to all thematic tracks, keynote sessions, high-tea, conference kit, and peer-reviewed publication compendium entry upon paper acceptance.",
-        url: "https://jce.ac.in/faculty-conclave-2027"
+        url: "https://jce.ac.in/faculty-conclave-2027",
+        uploadedQrSrc: ""
       },
       media: {
         logoSrc: "jce-logo.png"
@@ -1298,30 +1525,29 @@
     };
 
     let brochureData = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA));
+    let stagedLogoDataUrl = null;
+    let stagedQrDataUrl = null;
     let isAdminAuthenticated = false;
     let isInlineEditActive = false;
+
+    const SECRET_PIN = "9999";
+    const MAX_IMAGE_FILE_SIZE = 2 * 1024 * 1024; // 2 MB
+    const MAX_DOC_FILE_SIZE = 8 * 1024 * 1024;   // 8 MB
 
     // =========================================================================
     // MULTI-VECTOR HIDDEN AUTHENTICATION ('9999')
     // =========================================================================
     let keystrokeBuffer = "";
-    const SECRET_PIN = "9999";
 
-    // 1. Secret Keystroke Sequence '9999' Buffer Listener
     window.addEventListener("keydown", (e) => {
-      // Don't intercept typing when inside an input or editable field
-      if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) {
-        return;
-      }
+      if (['INPUT', 'TEXTAREA'].includes(e.target.tagName) || e.target.isContentEditable) return;
 
-      // Check Hotkey 'Ctrl + Shift + A' or 'Cmd + Shift + A'
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
         e.preventDefault();
         openSecretAuthModal();
         return;
       }
 
-      // Track last 4 characters for '9999'
       if (e.key.length === 1) {
         keystrokeBuffer += e.key;
         if (keystrokeBuffer.length > 10) keystrokeBuffer = keystrokeBuffer.slice(-10);
@@ -1332,7 +1558,6 @@
       }
     });
 
-    // 2. Triple-Click Listener on College Logo or Footer Seal
     function setupTripleClickTriggers() {
       const attachTripleClick = (elementId) => {
         const el = document.getElementById(elementId);
@@ -1354,7 +1579,6 @@
       attachTripleClick("brand-footer-trigger");
     }
 
-    // 3. Query Parameter Detection (?admin=9999)
     function checkUrlQueryAuthentication() {
       const params = new URLSearchParams(window.location.search);
       if (params.get("admin") === SECRET_PIN) {
@@ -1362,7 +1586,6 @@
       }
     }
 
-    // Modal Display Controls
     function openSecretAuthModal() {
       const modal = document.getElementById("secret-auth-modal");
       const input = document.getElementById("admin-pin-input");
@@ -1406,7 +1629,7 @@
         floatingBadge.classList.remove("hidden");
         floatingBadge.classList.add("flex");
       }
-      showToastNotification("Admin Authenticated via Passkey 9999!");
+      showToastNotification("Admin Authenticated via Passkey 9999!", "success");
       openAdminCmsModal();
     }
 
@@ -1419,7 +1642,7 @@
         floatingBadge.classList.remove("flex");
       }
       closeAdminCmsModal();
-      showToastNotification("Administrator logged out.");
+      showToastNotification("Administrator logged out successfully.", "info");
     }
 
     // =========================================================================
@@ -1435,14 +1658,14 @@
         if (label) label.textContent = "Edit Mode: ON";
         if (btn) btn.className = "px-2.5 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition";
         enableContentEditableAttributes(true);
-        showToastNotification("In-Place Editing Mode Activated! Click text on page to edit directly.");
+        showToastNotification("In-Place Editing Mode Activated! Click text on page to edit directly.", "info");
       } else {
         document.body.classList.remove("inline-edit-active");
         if (label) label.textContent = "Edit Mode: OFF";
         if (btn) btn.className = "px-2.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs flex items-center gap-1 cursor-pointer transition";
         enableContentEditableAttributes(false);
         saveInlineEditsToState();
-        showToastNotification("In-Place changes saved and applied!");
+        showToastNotification("In-Place changes saved and applied!", "success");
       }
     }
 
@@ -1514,7 +1737,7 @@
 
       // 3. Thematic Tracks
       const tracksContainer = document.getElementById("live-tracks-grid");
-      tracksContainer.innerHTML = brochureData.tracks.map((t, idx) => `
+      tracksContainer.innerHTML = brochureData.tracks.map((t) => `
         <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-jce-600 transition space-y-3 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
@@ -1560,7 +1783,48 @@
         </div>
       `).join('');
 
-      // 5. Rubric
+      // 5. Article Templates (Public Download Cards)
+      const templatesContainer = document.getElementById("live-templates-grid");
+      if (brochureData.templates && brochureData.templates.length > 0) {
+        templatesContainer.innerHTML = brochureData.templates.map(tmpl => `
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-jce-100 text-jce-800 uppercase">${tmpl.format}</span>
+                <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200">${tmpl.version}</span>
+              </div>
+              <h4 class="text-sm font-extrabold text-slate-900">${tmpl.title}</h4>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">${tmpl.notes}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-[10px] text-slate-400 font-mono">Rev: ${tmpl.updated}</span>
+              ${tmpl.dataUrl ? `
+                <a 
+                  href="${tmpl.dataUrl}" 
+                  download="${tmpl.title.replace(/\\s+/g, '_')}_${tmpl.version}.${tmpl.format.toLowerCase().includes('doc') ? 'docx' : tmpl.format.toLowerCase().includes('pdf') ? 'pdf' : 'zip'}"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl text-xs transition"
+                >
+                  <i data-lucide="download" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Download</span>
+                </a>
+              ` : `
+                <button 
+                  type="button" 
+                  onclick="triggerDefaultTemplateDownload('${tmpl.format}')"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-jce-900 hover:bg-jce-800 text-white font-bold rounded-xl text-xs transition"
+                >
+                  <i data-lucide="download" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Sample</span>
+                </button>
+              `}
+            </div>
+          </div>
+        `).join('');
+      } else {
+        templatesContainer.innerHTML = `<p class="col-span-3 text-slate-400 text-xs italic">No templates currently published.</p>`;
+      }
+
+      // 6. Rubric
       const rubricBody = document.getElementById("live-rubric-table-body");
       rubricBody.innerHTML = brochureData.rubric.map(r => `
         <tr class="hover:bg-slate-50 transition">
@@ -1571,7 +1835,7 @@
         </tr>
       `).join('');
 
-      // 6. Deadlines
+      // 7. Deadlines
       const deadlinesContainer = document.getElementById("live-deadlines-container");
       deadlinesContainer.innerHTML = brochureData.deadlines.map(d => `
         <div class="${d.highlight ? 'bg-white/10 border-2 border-gold-400' : 'bg-white/5 border border-white/10'} rounded-2xl p-4 space-y-2">
@@ -1582,35 +1846,92 @@
         </div>
       `).join('');
 
-      // 7. Committee & Leadership
-      const leadershipContainer = document.getElementById("live-leadership-container");
-      leadershipContainer.innerHTML = brochureData.committee.leadership.map(l => `
-        <div class="p-5 rounded-2xl ${l.highlight ? 'bg-amber-50/70 border border-gold-300' : 'bg-slate-50 border border-slate-200'} space-y-2">
-          <span class="px-2.5 py-0.5 rounded-full ${l.badgeClass} text-[10px] font-extrabold uppercase">${l.role}</span>
-          <h4 class="text-base font-black text-slate-900 pt-1">${l.name}</h4>
-          <p class="text-xs text-slate-600 font-medium">${l.title}</p>
-          <p class="text-[11px] ${l.highlight ? 'text-gold-700' : 'text-jce-700'} font-semibold">${l.inst}</p>
+      // 8A. Component: Dedicated Patrons Section
+      const patronsContainer = document.getElementById("live-patrons-container");
+      patronsContainer.innerHTML = (brochureData.committee.patrons || []).map(p => `
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-50 to-amber-50/40 border border-slate-200 shadow-xs flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs shrink-0 flex items-center justify-center">
+            ${p.photo ? `
+              <img src="${p.photo}" alt="${p.name}" class="w-full h-full object-cover">
+            ` : `
+              <div class="w-full h-full bg-jce-900 text-gold-400 font-black text-lg flex items-center justify-center">
+                ${getInitials(p.name)}
+              </div>
+            `}
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-950 text-[10px] font-black uppercase tracking-wider">${p.role}</span>
+            <h4 class="text-base font-black text-slate-900 mt-1 truncate">${p.name}</h4>
+            <p class="text-xs text-slate-600 font-semibold">${p.title}</p>
+            <p class="text-[11px] text-jce-800 font-medium">${p.org}</p>
+            ${(p.email || p.phone) ? `
+              <div class="pt-2 mt-2 border-t border-slate-200/80 flex flex-wrap gap-3 text-[11px] text-slate-500">
+                ${p.email ? `<span class="inline-flex items-center gap-1"><i data-lucide="mail" class="w-3 h-3 text-gold-600"></i> ${p.email}</span>` : ''}
+                ${p.phone ? `<span class="inline-flex items-center gap-1"><i data-lucide="phone" class="w-3 h-3 text-gold-600"></i> ${p.phone}</span>` : ''}
+              </div>
+            ` : ''}
+          </div>
         </div>
       `).join('');
 
+      // 8B. Component: Dedicated Chief Conveners Section
+      const convenersContainer = document.getElementById("live-conveners-container");
+      convenersContainer.innerHTML = (brochureData.committee.conveners || []).map(c => `
+        <div class="p-5 rounded-2xl ${c.highlight ? 'bg-amber-50/80 border border-gold-300' : 'bg-slate-50 border border-slate-200'} shadow-xs flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs shrink-0 flex items-center justify-center">
+            ${c.photo ? `
+              <img src="${c.photo}" alt="${c.name}" class="w-full h-full object-cover">
+            ` : `
+              <div class="w-full h-full bg-jce-800 text-white font-black text-lg flex items-center justify-center">
+                ${getInitials(c.name)}
+              </div>
+            `}
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="px-2.5 py-0.5 rounded-full ${c.highlight ? 'bg-gold-200 text-gold-950' : 'bg-blue-100 text-jce-900'} text-[10px] font-black uppercase">${c.role}</span>
+            <h4 class="text-base font-black text-slate-900 mt-1 truncate">${c.name}</h4>
+            <p class="text-xs text-slate-600 font-semibold">${c.title}</p>
+            <p class="text-[11px] text-jce-700 font-medium">${c.inst}</p>
+            ${(c.email || c.phone) ? `
+              <div class="pt-2 mt-2 border-t border-slate-200/80 flex flex-wrap gap-3 text-[11px] text-slate-500">
+                ${c.email ? `<span class="inline-flex items-center gap-1"><i data-lucide="mail" class="w-3 h-3 text-jce-600"></i> ${c.email}</span>` : ''}
+                ${c.phone ? `<span class="inline-flex items-center gap-1"><i data-lucide="phone" class="w-3 h-3 text-jce-600"></i> ${c.phone}</span>` : ''}
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `).join('');
+
+      // 8C. Deans & Chairs with Photos
       const deansContainer = document.getElementById("live-deans-container");
       deansContainer.innerHTML = brochureData.committee.deans.map(d => `
-        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-          <h5 class="text-xs font-bold text-slate-900">${d.name}</h5>
-          <p class="text-[11px] text-slate-500">${d.title}</p>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 shrink-0 overflow-hidden flex items-center justify-center">
+            ${d.photo ? `<img src="${d.photo}" alt="${d.name}" class="w-full h-full object-cover">` : `<span class="text-xs font-bold text-slate-600">${getInitials(d.name)}</span>`}
+          </div>
+          <div class="min-w-0">
+            <h5 class="text-xs font-bold text-slate-900 truncate">${d.name}</h5>
+            <p class="text-[10px] text-slate-500 truncate">${d.title}</p>
+          </div>
         </div>
       `).join('');
 
+      // 8D. Department Heads
       const hodsContainer = document.getElementById("live-hods-container");
       hodsContainer.innerHTML = brochureData.committee.hods.map(h => `
-        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-          <span class="text-[9px] font-bold ${h.tagClass} uppercase block">${h.tag}</span>
-          <p class="font-extrabold text-slate-900 mt-0.5">${h.name}</p>
-          <p class="text-[11px] text-slate-500">${h.title}</p>
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 shrink-0 overflow-hidden flex items-center justify-center">
+            ${h.photo ? `<img src="${h.photo}" alt="${h.name}" class="w-full h-full object-cover">` : `<span class="text-xs font-bold text-slate-600">${getInitials(h.name)}</span>`}
+          </div>
+          <div class="min-w-0">
+            <span class="text-[9px] font-bold ${h.tagClass} uppercase block truncate">${h.tag}</span>
+            <p class="font-extrabold text-slate-900 text-xs truncate">${h.name}</p>
+            <p class="text-[10px] text-slate-500 truncate">${h.title}</p>
+          </div>
         </div>
       `).join('');
 
-      // 8. Venue & Contacts
+      // 9. Venue & Contacts
       document.getElementById("live-venue-title").textContent = brochureData.venue.title;
       document.getElementById("live-venue-desc").textContent = brochureData.venue.desc;
       document.getElementById("live-venue-address").textContent = brochureData.venue.address;
@@ -1629,22 +1950,22 @@
       webEl.textContent = brochureData.contact.web;
       webEl.href = brochureData.contact.web;
 
-      // 9. Registration URL & QR
+      // 10. Registration URL & QR Presentation
       document.getElementById("live-registration-desc").textContent = brochureData.registration.desc;
       const regLink = document.getElementById("live-registration-link");
       regLink.href = brochureData.registration.url;
       document.getElementById("live-registration-url-text").textContent = brochureData.registration.url;
 
-      renderQrCode(brochureData.registration.url);
+      renderPublicQrCode();
 
-      // 10. Logos
+      // 11. Logos
       const logoSrc = brochureData.media?.logoSrc || "jce-logo.png";
       ['live-logo-header', 'live-logo-hero', 'live-logo-footer'].forEach(id => {
         const img = document.getElementById(id);
         if (img) img.src = logoSrc;
       });
 
-      // 11. Custom Content Blocks
+      // 12. Custom Content Blocks
       const customSection = document.getElementById("custom-blocks-section");
       const customGrid = document.getElementById("live-custom-blocks-grid");
       if (brochureData.customBlocks && brochureData.customBlocks.length > 0) {
@@ -1663,22 +1984,48 @@
       lucide.createIcons();
     }
 
-    function renderQrCode(url) {
-      const qrTarget = document.getElementById("qrcode-container");
-      if (!qrTarget) return;
-      qrTarget.innerHTML = "";
-      new QRCode(qrTarget, {
-        text: url || "https://jce.ac.in",
-        width: 100,
-        height: 100,
-        colorDark: "#1e3a8a",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.M
-      });
+    // Helper: Extract Initials for Avatars
+    function getInitials(name) {
+      if (!name) return "FC";
+      const clean = name.replace(/(Dr\.|Prof\.|Mr\.|Mrs\.|Ms\.)/g, '').trim();
+      const parts = clean.split(' ').filter(Boolean);
+      if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    // QR Code Renderer (Upload Priority over Auto-Generated Vector)
+    function renderPublicQrCode() {
+      const customImg = document.getElementById("live-custom-qr-img");
+      const dynamicBox = document.getElementById("qrcode-container");
+      const caption = document.getElementById("live-qr-caption");
+
+      if (brochureData.registration.uploadedQrSrc) {
+        if (dynamicBox) dynamicBox.classList.add("hidden");
+        if (customImg) {
+          customImg.src = brochureData.registration.uploadedQrSrc;
+          customImg.classList.remove("hidden");
+        }
+        if (caption) caption.textContent = "Official Institutional QR Scan Code";
+      } else {
+        if (customImg) customImg.classList.add("hidden");
+        if (dynamicBox) {
+          dynamicBox.classList.remove("hidden");
+          dynamicBox.innerHTML = "";
+          new QRCode(dynamicBox, {
+            text: brochureData.registration.url || "https://jce.ac.in",
+            width: 120,
+            height: 120,
+            colorDark: "#0b132b",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+          });
+        }
+        if (caption) caption.textContent = "Direct camera link for rapid mobile submission";
+      }
     }
 
     // =========================================================================
-    // ADMIN CMS MODAL TAB & FORM CONTROLLERS
+    // ADMIN CMS MODAL CONTROLLERS & FORM BINDINGS
     // =========================================================================
     function openAdminCmsModal() {
       populateCmsFormFields();
@@ -1700,7 +2047,7 @@
     }
 
     function switchCmsTab(tabName) {
-      const tabs = ['hero', 'vision', 'tracks', 'guidelines', 'deadlines', 'committee', 'venue', 'branding', 'custom'];
+      const tabs = ['hero', 'vision', 'tracks', 'templates', 'guidelines', 'deadlines', 'patrons', 'conveners', 'faculty', 'venue', 'branding', 'qr', 'custom'];
       tabs.forEach(t => {
         const btn = document.getElementById(`cms-tab-${t}`);
         const panel = document.getElementById(`cms-panel-${t}`);
@@ -1733,6 +2080,9 @@
       // Tracks
       renderCmsTracksList();
 
+      // Templates
+      renderCmsTemplatesList();
+
       // Guidelines & Rubric
       renderCmsGuidelinesList();
       renderCmsRubricList();
@@ -1741,7 +2091,9 @@
       renderCmsDeadlinesList();
 
       // Committee
-      renderCmsCommitteeLists();
+      renderCmsPatronsList();
+      renderCmsConvenersList();
+      renderCmsFacultyList();
 
       // Venue
       document.getElementById("cms-venue-title").value = brochureData.venue.title;
@@ -1753,15 +2105,438 @@
       document.getElementById("cms-contact-email").value = brochureData.contact.email;
       document.getElementById("cms-contact-phone").value = brochureData.contact.phone;
 
-      // Branding
-      document.getElementById("cms-logo-url").value = brochureData.media?.logoSrc || "";
+      // Branding & Logo
+      document.getElementById("cms-logo-url").value = (brochureData.media?.logoSrc && !brochureData.media.logoSrc.startsWith('data:')) ? brochureData.media.logoSrc : "";
+      document.getElementById("cms-logo-preview").src = brochureData.media?.logoSrc || "jce-logo.png";
+      document.getElementById("cms-logo-feedback").innerHTML = `<span class="text-emerald-600">Active logo loaded correctly.</span>`;
+      stagedLogoDataUrl = null;
+
+      // QR Code
       document.getElementById("cms-reg-url").value = brochureData.registration.url;
+      const qrPreview = document.getElementById("cms-qr-preview");
+      if (brochureData.registration.uploadedQrSrc) {
+        qrPreview.src = brochureData.registration.uploadedQrSrc;
+        document.getElementById("cms-qr-feedback").innerHTML = `<span class="text-emerald-600">Custom uploaded QR image active.</span>`;
+      } else {
+        qrPreview.src = "https://placehold.co/120x120/1e3a8a/ffffff?text=Vector+QR";
+        document.getElementById("cms-qr-feedback").innerHTML = `<span class="text-slate-500">Vector dynamic generator active.</span>`;
+      }
+      stagedQrDataUrl = null;
 
       // Custom
       renderCmsCustomBlocksList();
     }
 
-    // Dynamic Lists Rendering inside CMS
+    // =========================================================================
+    // ENHANCEMENT 1: DEDICATED PATRONS & CHIEF CONVENERS CMS LOGIC
+    // =========================================================================
+    function renderCmsPatronsList() {
+      const list = document.getElementById("cms-patrons-list");
+      list.innerHTML = (brochureData.committee.patrons || []).map((p, idx) => `
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-800">Patron #${idx + 1}</span>
+            <button type="button" onclick="deletePatronItem(${idx})" class="text-rose-600 hover:text-rose-800 font-bold text-xs cursor-pointer">Remove</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Full Name *</label>
+              <input type="text" value="${p.name}" data-patron-name="${idx}" class="w-full font-bold px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Patronage Title / Honor *</label>
+              <input type="text" value="${p.role}" data-patron-role="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs" placeholder="e.g. Chief Patron">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Academic Designation</label>
+              <input type="text" value="${p.title}" data-patron-title="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs" placeholder="e.g. Principal & Director">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Organization / Institution</label>
+              <input type="text" value="${p.org}" data-patron-org="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Email Contact</label>
+              <input type="email" value="${p.email || ''}" data-patron-email="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Phone Contact</label>
+              <input type="text" value="${p.phone || ''}" data-patron-phone="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-600 text-[10px] uppercase mb-1">Patron Photo (Image file · Max 1.5MB)</label>
+            <div class="flex items-center gap-3">
+              <input type="file" accept="image/*" onchange="handleFacultyPhotoUpload(this, 'patron', ${idx})" class="text-xs file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700">
+              ${p.photo ? `<img src="${p.photo}" class="w-8 h-8 rounded-lg object-cover border border-slate-300">` : `<span class="text-[10px] text-slate-400">No Photo Uploaded</span>`}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addNewPatronItem() {
+      if (!brochureData.committee.patrons) brochureData.committee.patrons = [];
+      brochureData.committee.patrons.push({
+        name: "New Patron",
+        role: "Patron",
+        title: "Executive Trustee",
+        org: "Jain College of Engineering, Belagavi",
+        email: "",
+        phone: "",
+        photo: ""
+      });
+      renderCmsPatronsList();
+    }
+
+    function deletePatronItem(idx) {
+      brochureData.committee.patrons.splice(idx, 1);
+      renderCmsPatronsList();
+    }
+
+    function renderCmsConvenersList() {
+      const list = document.getElementById("cms-conveners-list");
+      list.innerHTML = (brochureData.committee.conveners || []).map((c, idx) => `
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-slate-800">Convener #${idx + 1}</span>
+            <button type="button" onclick="deleteConvenerItem(${idx})" class="text-rose-600 hover:text-rose-800 font-bold text-xs cursor-pointer">Remove</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Convener Full Name *</label>
+              <input type="text" value="${c.name}" data-conv-name="${idx}" class="w-full font-bold px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Roster Role *</label>
+              <input type="text" value="${c.role}" data-conv-role="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Institutional Designation</label>
+              <input type="text" value="${c.title}" data-conv-title="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">College / Institution</label>
+              <input type="text" value="${c.inst}" data-conv-inst="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Official Email</label>
+              <input type="email" value="${c.email || ''}" data-conv-email="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[10px] uppercase">Direct Phone</label>
+              <input type="text" value="${c.phone || ''}" data-conv-phone="${idx}" class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-xs">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-600 text-[10px] uppercase mb-1">Convener Portrait (Max 1.5MB)</label>
+            <div class="flex items-center gap-3">
+              <input type="file" accept="image/*" onchange="handleFacultyPhotoUpload(this, 'convener', ${idx})" class="text-xs file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700">
+              ${c.photo ? `<img src="${c.photo}" class="w-8 h-8 rounded-lg object-cover border border-slate-300">` : `<span class="text-[10px] text-slate-400">No Photo Uploaded</span>`}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addNewConvenerItem() {
+      if (!brochureData.committee.conveners) brochureData.committee.conveners = [];
+      brochureData.committee.conveners.push({
+        name: "New Convener",
+        role: "Co-Convener",
+        title: "Associate Professor",
+        inst: "Jain College of Engineering, Belagavi",
+        email: "",
+        phone: "",
+        photo: "",
+        highlight: false
+      });
+      renderCmsConvenersList();
+    }
+
+    function deleteConvenerItem(idx) {
+      brochureData.committee.conveners.splice(idx, 1);
+      renderCmsConvenersList();
+    }
+
+    // =========================================================================
+    // ENHANCEMENT 2: SECURE COLLEGE LOGO UPLOAD & BUG FIX
+    // =========================================================================
+    function handleLogoFileUploadEnhanced(input) {
+      const feedback = document.getElementById("cms-logo-feedback");
+      const preview = document.getElementById("cms-logo-preview");
+      const file = input.files[0];
+      if (!file) return;
+
+      const validMimeTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'];
+      if (!validMimeTypes.includes(file.type)) {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">Invalid file format (${file.type || 'unknown'}). Please upload a PNG, JPEG, SVG, or WebP graphic.</span>`;
+        input.value = "";
+        return;
+      }
+
+      if (file.size > MAX_IMAGE_FILE_SIZE) {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">File size (${(file.size / 1024 / 1024).toFixed(2)} MB) exceeds institutional 2 MB quota limit.</span>`;
+        input.value = "";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        stagedLogoDataUrl = e.target.result;
+        preview.src = stagedLogoDataUrl;
+        document.getElementById("cms-logo-url").value = "";
+        feedback.innerHTML = `<span class="text-emerald-700 font-bold">✓ Logo uploaded and staged. Click "Save & Apply Changes" to persist.</span>`;
+      };
+      reader.onerror = function() {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">Failed to read image file buffer. Please try another file.</span>`;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function handleLogoUrlInput(url) {
+      if (url.trim()) {
+        stagedLogoDataUrl = null;
+        document.getElementById("cms-logo-preview").src = url.trim();
+        document.getElementById("cms-logo-feedback").innerHTML = `<span class="text-blue-700">Previewing external logo URL.</span>`;
+      }
+    }
+
+    // =========================================================================
+    // ENHANCEMENT 3: REGISTRATION QR CODE UPLOAD LOGIC
+    // =========================================================================
+    function handleQrFileUploadEnhanced(input) {
+      const feedback = document.getElementById("cms-qr-feedback");
+      const preview = document.getElementById("cms-qr-preview");
+      const file = input.files[0];
+      if (!file) return;
+
+      const validMimes = ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'];
+      if (!validMimes.includes(file.type)) {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">Invalid QR format. Only image files (PNG/JPG/WebP/SVG) are permitted.</span>`;
+        input.value = "";
+        return;
+      }
+
+      if (file.size > MAX_IMAGE_FILE_SIZE) {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">QR Image exceeds 2 MB limit.</span>`;
+        input.value = "";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        stagedQrDataUrl = e.target.result;
+        preview.src = stagedQrDataUrl;
+        feedback.innerHTML = `<span class="text-emerald-700 font-bold">✓ Custom QR code staged. Click "Save & Apply Changes" to commit.</span>`;
+      };
+      reader.onerror = function() {
+        feedback.innerHTML = `<span class="text-rose-600 font-bold">Error reading file buffer.</span>`;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function revertToDynamicQr() {
+      stagedQrDataUrl = "";
+      brochureData.registration.uploadedQrSrc = "";
+      document.getElementById("cms-qr-preview").src = "https://placehold.co/120x120/1e3a8a/ffffff?text=Vector+QR";
+      document.getElementById("cms-qr-feedback").innerHTML = `<span class="text-amber-700 font-semibold">Switched to auto-generated vector QR mode.</span>`;
+      showToastNotification("Reverted to vector QR generation.", "info");
+    }
+
+    // =========================================================================
+    // ENHANCEMENT 4: FACULTY PHOTO UPLOADS WITH SECURITY CONTROLS
+    // =========================================================================
+    function renderCmsFacultyList() {
+      const deansList = document.getElementById("cms-deans-list");
+      deansList.innerHTML = brochureData.committee.deans.map((d, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+          <div class="sm:col-span-4">
+            <label class="block text-[10px] font-bold text-slate-500 uppercase">Dean Full Name</label>
+            <input type="text" value="${d.name}" data-dean-name="${idx}" class="w-full font-bold px-2 py-1 border border-slate-300 rounded text-xs">
+          </div>
+          <div class="sm:col-span-5">
+            <label class="block text-[10px] font-bold text-slate-500 uppercase">Portfolio / Role</label>
+            <input type="text" value="${d.title}" data-dean-title="${idx}" class="w-full px-2 py-1 border border-slate-300 rounded text-xs">
+          </div>
+          <div class="sm:col-span-3 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg border border-slate-200 bg-slate-50 overflow-hidden shrink-0 flex items-center justify-center">
+              ${d.photo ? `<img src="${d.photo}" class="w-full h-full object-cover">` : `<span class="text-[9px] text-slate-400">N/A</span>`}
+            </div>
+            <input type="file" accept="image/*" onchange="handleFacultyPhotoUpload(this, 'dean', ${idx})" class="w-full text-[10px] file:mr-1 file:py-0.5 file:px-1.5 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700">
+          </div>
+        </div>
+      `).join('');
+
+      const hodsList = document.getElementById("cms-hods-list");
+      hodsList.innerHTML = brochureData.committee.hods.map((h, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
+          <div class="sm:col-span-4">
+            <label class="block text-[10px] font-bold text-slate-500 uppercase">Department Chair</label>
+            <input type="text" value="${h.name}" data-hod-name="${idx}" class="w-full font-bold px-2 py-1 border border-slate-300 rounded text-xs">
+          </div>
+          <div class="sm:col-span-4">
+            <label class="block text-[10px] font-bold text-slate-500 uppercase">Academic Title</label>
+            <input type="text" value="${h.title}" data-hod-title="${idx}" class="w-full px-2 py-1 border border-slate-300 rounded text-xs">
+          </div>
+          <div class="sm:col-span-4 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg border border-slate-200 bg-slate-50 overflow-hidden shrink-0 flex items-center justify-center">
+              ${h.photo ? `<img src="${h.photo}" class="w-full h-full object-cover">` : `<span class="text-[9px] text-slate-400">N/A</span>`}
+            </div>
+            <input type="file" accept="image/*" onchange="handleFacultyPhotoUpload(this, 'hod', ${idx})" class="w-full text-[10px] file:mr-1 file:py-0.5 file:px-1.5 file:rounded file:border-0 file:bg-blue-50 file:text-blue-700">
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function handleFacultyPhotoUpload(input, entityType, idx) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const validMimes = ['image/jpeg', 'image/png', 'image/webp'];
+      if (!validMimes.includes(file.type)) {
+        showToastNotification("Invalid image! Only JPG, PNG, and WebP are allowed for faculty photos.", "error");
+        input.value = "";
+        return;
+      }
+
+      if (file.size > 1.5 * 1024 * 1024) {
+        showToastNotification("Faculty photo exceeds maximum 1.5 MB limit.", "error");
+        input.value = "";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const dataUrl = e.target.result;
+        if (entityType === 'patron') {
+          brochureData.committee.patrons[idx].photo = dataUrl;
+          renderCmsPatronsList();
+        } else if (entityType === 'convener') {
+          brochureData.committee.conveners[idx].photo = dataUrl;
+          renderCmsConvenersList();
+        } else if (entityType === 'dean') {
+          brochureData.committee.deans[idx].photo = dataUrl;
+          renderCmsFacultyList();
+        } else if (entityType === 'hod') {
+          brochureData.committee.hods[idx].photo = dataUrl;
+          renderCmsFacultyList();
+        }
+        showToastNotification("Faculty photo staged successfully!", "success");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // =========================================================================
+    // ENHANCEMENT 5: ARTICLE TEMPLATES & VERSION CONTROL CMS
+    // =========================================================================
+    function renderCmsTemplatesList() {
+      const list = document.getElementById("cms-templates-list");
+      list.innerHTML = (brochureData.templates || []).map((t, idx) => `
+        <div class="p-3 bg-white rounded-xl border border-slate-200 flex flex-wrap items-center justify-between gap-3">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-900 text-white">${t.format}</span>
+              <h5 class="text-xs font-extrabold text-slate-900">${t.title}</h5>
+              <span class="text-[10px] font-bold text-gold-700 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">${t.version}</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">${t.notes} (Revised: ${t.updated})</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="deleteTemplateItem(${idx})" class="p-1.5 text-rose-600 hover:bg-rose-50 rounded-lg cursor-pointer">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function handleTemplateUploadCommit() {
+      const titleInput = document.getElementById("cms-template-name");
+      const verInput = document.getElementById("cms-template-version");
+      const notesInput = document.getElementById("cms-template-notes");
+      const fileInput = document.getElementById("cms-template-file");
+
+      const title = titleInput.value.trim();
+      const version = verInput.value.trim() || "v1.0";
+      const notes = notesInput.value.trim() || "Standard conference submission format.";
+      const file = fileInput.files[0];
+
+      if (!title) {
+        showToastNotification("Please enter a template title.", "error");
+        return;
+      }
+
+      if (!file) {
+        showToastNotification("Please select a file to upload.", "error");
+        return;
+      }
+
+      const validExts = ['.docx', '.doc', '.pdf', '.zip', '.tar.gz', '.tex'];
+      const fileNameLower = file.name.toLowerCase();
+      const isValidExt = validExts.some(ext => fileNameLower.endsWith(ext));
+
+      if (!isValidExt) {
+        showToastNotification("Invalid file type! Allowed formats: Word (.docx), PDF (.pdf), or LaTeX packages (.zip/.tex).", "error");
+        return;
+      }
+
+      if (file.size > MAX_DOC_FILE_SIZE) {
+        showToastNotification("Template package exceeds the maximum 8 MB size limit.", "error");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        let formatTag = "DOCX";
+        if (fileNameLower.endsWith('.pdf')) formatTag = "PDF";
+        else if (fileNameLower.endsWith('.tex') || fileNameLower.endsWith('.zip')) formatTag = "LATEX";
+
+        if (!brochureData.templates) brochureData.templates = [];
+        brochureData.templates.push({
+          id: `tmpl-${Date.now()}`,
+          title: title,
+          format: formatTag,
+          version: version,
+          updated: new Date().toISOString().slice(0, 7),
+          notes: notes,
+          dataUrl: e.target.result
+        });
+
+        titleInput.value = "";
+        verInput.value = "";
+        notesInput.value = "";
+        fileInput.value = "";
+
+        renderCmsTemplatesList();
+        showToastNotification(`Template registered successfully with version ${version}!`, "success");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function deleteTemplateItem(idx) {
+      brochureData.templates.splice(idx, 1);
+      renderCmsTemplatesList();
+    }
+
+    function triggerDefaultTemplateDownload(format) {
+      showToastNotification(`Preparing official IEEE ${format} master package download...`, "info");
+      const sampleText = `Faculty Conclave 2027 Official Paper Template\\nFormat: ${format}\\nAffiliation: Jain College of Engineering, Belagavi`;
+      const blob = new Blob([sampleText], { type: "text/plain;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `Faculty_Conclave_2027_Template_${format}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // Dynamic Lists (Mission, Tracks, Deadlines, Guidelines, Rubric, Custom)
     function renderCmsMissionList() {
       const list = document.getElementById("cms-mission-list");
       list.innerHTML = brochureData.institution.mission.map((m, idx) => `
@@ -1880,34 +2655,6 @@
       renderCmsDeadlinesList();
     }
 
-    function renderCmsCommitteeLists() {
-      const leadList = document.getElementById("cms-leadership-list");
-      leadList.innerHTML = brochureData.committee.leadership.map((l, idx) => `
-        <div class="p-3 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2">
-          <input type="text" value="${l.role}" data-lead-role="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Role">
-          <input type="text" value="${l.name}" data-lead-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Full Name">
-          <input type="text" value="${l.title}" data-lead-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs" placeholder="Designation">
-        </div>
-      `).join('');
-
-      const deansList = document.getElementById("cms-deans-list");
-      deansList.innerHTML = brochureData.committee.deans.map((d, idx) => `
-        <div class="p-2.5 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <input type="text" value="${d.name}" data-dean-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs">
-          <input type="text" value="${d.title}" data-dean-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs">
-        </div>
-      `).join('');
-
-      const hodsList = document.getElementById("cms-hods-list");
-      hodsList.innerHTML = brochureData.committee.hods.map((h, idx) => `
-        <div class="p-2.5 bg-white rounded-xl border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2">
-          <input type="text" value="${h.name}" data-hod-name="${idx}" class="font-bold px-2 py-1 border border-slate-300 rounded text-xs">
-          <input type="text" value="${h.title}" data-hod-title="${idx}" class="px-2 py-1 border border-slate-300 rounded text-xs">
-          <input type="text" value="${h.tag}" data-hod-tag="${idx}" class="text-slate-500 px-2 py-1 border border-slate-300 rounded text-xs">
-        </div>
-      `).join('');
-    }
-
     function renderCmsCustomBlocksList() {
       const list = document.getElementById("cms-custom-blocks-list");
       list.innerHTML = (brochureData.customBlocks || []).map((b, idx) => `
@@ -1938,189 +2685,240 @@
       renderCmsCustomBlocksList();
     }
 
-    // Media & Logo File Upload
-    function handleLogoFileUpload(input) {
-      const file = input.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        brochureData.media = brochureData.media || {};
-        brochureData.media.logoSrc = e.target.result;
-        document.getElementById("cms-logo-preview").src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-
     // =========================================================================
-    // SAVING, EXPORTING & PERSISTENCE
+    // SAVING, PERSISTENCE & DATA STORAGE INTEGRITY
     // =========================================================================
     function saveAllCmsChanges() {
-      // Hero
-      brochureData.hero.badge = document.getElementById("cms-hero-badge").value.trim();
-      brochureData.hero.title = document.getElementById("cms-hero-title").value.trim();
-      brochureData.hero.tagline = document.getElementById("cms-hero-tagline").value.trim();
-      brochureData.hero.description = document.getElementById("cms-hero-desc").value.trim();
+      try {
+        // Hero
+        brochureData.hero.badge = document.getElementById("cms-hero-badge").value.trim();
+        brochureData.hero.title = document.getElementById("cms-hero-title").value.trim();
+        brochureData.hero.tagline = document.getElementById("cms-hero-tagline").value.trim();
+        brochureData.hero.description = document.getElementById("cms-hero-desc").value.trim();
 
-      brochureData.institution.vtu = document.getElementById("cms-stat-vtu").value.trim();
-      brochureData.institution.aicte = document.getElementById("cms-stat-aicte").value.trim();
-      brochureData.institution.nba = document.getElementById("cms-stat-nba").value.trim();
+        brochureData.institution.vtu = document.getElementById("cms-stat-vtu").value.trim();
+        brochureData.institution.aicte = document.getElementById("cms-stat-aicte").value.trim();
+        brochureData.institution.nba = document.getElementById("cms-stat-nba").value.trim();
 
-      // Vision & Mission
-      brochureData.institution.vision = document.getElementById("cms-vision-text").value.trim();
-      document.querySelectorAll("[data-mission-idx]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-mission-idx"), 10);
-        if (brochureData.institution.mission[idx] !== undefined) {
-          brochureData.institution.mission[idx] = input.value.trim();
+        // Vision & Mission
+        brochureData.institution.vision = document.getElementById("cms-vision-text").value.trim();
+        document.querySelectorAll("[data-mission-idx]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-mission-idx"), 10);
+          if (brochureData.institution.mission[idx] !== undefined) {
+            brochureData.institution.mission[idx] = input.value.trim();
+          }
+        });
+
+        // Tracks
+        document.querySelectorAll("[data-track-code]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-track-code"), 10);
+          if (brochureData.tracks[idx]) brochureData.tracks[idx].code = input.value.trim();
+        });
+        document.querySelectorAll("[data-track-badge]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-track-badge"), 10);
+          if (brochureData.tracks[idx]) brochureData.tracks[idx].badge = input.value.trim();
+        });
+        document.querySelectorAll("[data-track-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-track-title"), 10);
+          if (brochureData.tracks[idx]) brochureData.tracks[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-track-desc]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-track-desc"), 10);
+          if (brochureData.tracks[idx]) brochureData.tracks[idx].desc = input.value.trim();
+        });
+        document.querySelectorAll("[data-track-comp]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-track-comp"), 10);
+          if (brochureData.tracks[idx]) brochureData.tracks[idx].compliance = input.value.trim();
+        });
+
+        // Guidelines & Rubric
+        document.querySelectorAll("[data-guide-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-guide-title"), 10);
+          if (brochureData.guidelines[idx]) brochureData.guidelines[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-guide-desc]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-guide-desc"), 10);
+          if (brochureData.guidelines[idx]) brochureData.guidelines[idx].desc = input.value.trim();
+        });
+
+        document.querySelectorAll("[data-rubric-param]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-rubric-param"), 10);
+          if (brochureData.rubric[idx]) brochureData.rubric[idx].param = input.value.trim();
+        });
+        document.querySelectorAll("[data-rubric-focus]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-rubric-focus"), 10);
+          if (brochureData.rubric[idx]) brochureData.rubric[idx].focus = input.value.trim();
+        });
+        document.querySelectorAll("[data-rubric-weight]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-rubric-weight"), 10);
+          if (brochureData.rubric[idx]) brochureData.rubric[idx].weight = input.value.trim();
+        });
+
+        // Deadlines
+        document.querySelectorAll("[data-dead-phase]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dead-phase"), 10);
+          if (brochureData.deadlines[idx]) brochureData.deadlines[idx].phase = input.value.trim();
+        });
+        document.querySelectorAll("[data-dead-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dead-title"), 10);
+          if (brochureData.deadlines[idx]) brochureData.deadlines[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-dead-date]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dead-date"), 10);
+          if (brochureData.deadlines[idx]) brochureData.deadlines[idx].date = input.value.trim();
+        });
+        document.querySelectorAll("[data-dead-desc]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dead-desc"), 10);
+          if (brochureData.deadlines[idx]) brochureData.deadlines[idx].desc = input.value.trim();
+        });
+
+        // Patrons Sync
+        document.querySelectorAll("[data-patron-name]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-name"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].name = input.value.trim();
+        });
+        document.querySelectorAll("[data-patron-role]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-role"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].role = input.value.trim();
+        });
+        document.querySelectorAll("[data-patron-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-title"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-patron-org]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-org"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].org = input.value.trim();
+        });
+        document.querySelectorAll("[data-patron-email]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-email"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].email = input.value.trim();
+        });
+        document.querySelectorAll("[data-patron-phone]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-patron-phone"), 10);
+          if (brochureData.committee.patrons[idx]) brochureData.committee.patrons[idx].phone = input.value.trim();
+        });
+
+        // Conveners Sync
+        document.querySelectorAll("[data-conv-name]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-name"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].name = input.value.trim();
+        });
+        document.querySelectorAll("[data-conv-role]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-role"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].role = input.value.trim();
+        });
+        document.querySelectorAll("[data-conv-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-title"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-conv-inst]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-inst"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].inst = input.value.trim();
+        });
+        document.querySelectorAll("[data-conv-email]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-email"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].email = input.value.trim();
+        });
+        document.querySelectorAll("[data-conv-phone]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-conv-phone"), 10);
+          if (brochureData.committee.conveners[idx]) brochureData.committee.conveners[idx].phone = input.value.trim();
+        });
+
+        // Deans & HODs Sync
+        document.querySelectorAll("[data-dean-name]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dean-name"), 10);
+          if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].name = input.value.trim();
+        });
+        document.querySelectorAll("[data-dean-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-dean-title"), 10);
+          if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-hod-name]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-hod-name"), 10);
+          if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].name = input.value.trim();
+        });
+        document.querySelectorAll("[data-hod-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-hod-title"), 10);
+          if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].title = input.value.trim();
+        });
+
+        // Venue & Contacts
+        brochureData.venue.title = document.getElementById("cms-venue-title").value.trim();
+        brochureData.venue.desc = document.getElementById("cms-venue-desc").value.trim();
+        brochureData.venue.address = document.getElementById("cms-venue-address").value.trim();
+
+        brochureData.contact.convenerName = document.getElementById("cms-contact-name").value.trim();
+        brochureData.contact.convenerRole = document.getElementById("cms-contact-role").value.trim();
+        brochureData.contact.email = document.getElementById("cms-contact-email").value.trim();
+        brochureData.contact.phone = document.getElementById("cms-contact-phone").value.trim();
+
+        // Logo Staging & Persistence Fix
+        if (stagedLogoDataUrl) {
+          brochureData.media = brochureData.media || {};
+          brochureData.media.logoSrc = stagedLogoDataUrl;
+        } else {
+          const logoUrlInput = document.getElementById("cms-logo-url").value.trim();
+          if (logoUrlInput) {
+            brochureData.media = brochureData.media || {};
+            brochureData.media.logoSrc = logoUrlInput;
+          }
         }
-      });
 
-      // Tracks
-      document.querySelectorAll("[data-track-code]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-track-code"), 10);
-        if (brochureData.tracks[idx]) brochureData.tracks[idx].code = input.value.trim();
-      });
-      document.querySelectorAll("[data-track-badge]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-track-badge"), 10);
-        if (brochureData.tracks[idx]) brochureData.tracks[idx].badge = input.value.trim();
-      });
-      document.querySelectorAll("[data-track-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-track-title"), 10);
-        if (brochureData.tracks[idx]) brochureData.tracks[idx].title = input.value.trim();
-      });
-      document.querySelectorAll("[data-track-desc]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-track-desc"), 10);
-        if (brochureData.tracks[idx]) brochureData.tracks[idx].desc = input.value.trim();
-      });
-      document.querySelectorAll("[data-track-comp]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-track-comp"), 10);
-        if (brochureData.tracks[idx]) brochureData.tracks[idx].compliance = input.value.trim();
-      });
+        // Registration QR Code Staging & URL
+        if (stagedQrDataUrl !== null) {
+          brochureData.registration.uploadedQrSrc = stagedQrDataUrl;
+        }
+        brochureData.registration.url = document.getElementById("cms-reg-url").value.trim();
 
-      // Guidelines & Rubric
-      document.querySelectorAll("[data-guide-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-guide-title"), 10);
-        if (brochureData.guidelines[idx]) brochureData.guidelines[idx].title = input.value.trim();
-      });
-      document.querySelectorAll("[data-guide-desc]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-guide-desc"), 10);
-        if (brochureData.guidelines[idx]) brochureData.guidelines[idx].desc = input.value.trim();
-      });
+        // Custom Blocks
+        document.querySelectorAll("[data-block-badge]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-block-badge"), 10);
+          if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].badge = input.value.trim();
+        });
+        document.querySelectorAll("[data-block-title]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-block-title"), 10);
+          if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].title = input.value.trim();
+        });
+        document.querySelectorAll("[data-block-desc]").forEach(input => {
+          const idx = parseInt(input.getAttribute("data-block-desc"), 10);
+          if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].desc = input.value.trim();
+        });
 
-      document.querySelectorAll("[data-rubric-param]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-rubric-param"), 10);
-        if (brochureData.rubric[idx]) brochureData.rubric[idx].param = input.value.trim();
-      });
-      document.querySelectorAll("[data-rubric-focus]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-rubric-focus"), 10);
-        if (brochureData.rubric[idx]) brochureData.rubric[idx].focus = input.value.trim();
-      });
-      document.querySelectorAll("[data-rubric-weight]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-rubric-weight"), 10);
-        if (brochureData.rubric[idx]) brochureData.rubric[idx].weight = input.value.trim();
-      });
-
-      // Deadlines
-      document.querySelectorAll("[data-dead-phase]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dead-phase"), 10);
-        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].phase = input.value.trim();
-      });
-      document.querySelectorAll("[data-dead-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dead-title"), 10);
-        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].title = input.value.trim();
-      });
-      document.querySelectorAll("[data-dead-date]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dead-date"), 10);
-        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].date = input.value.trim();
-      });
-      document.querySelectorAll("[data-dead-desc]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dead-desc"), 10);
-        if (brochureData.deadlines[idx]) brochureData.deadlines[idx].desc = input.value.trim();
-      });
-
-      // Committee
-      document.querySelectorAll("[data-lead-role]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-lead-role"), 10);
-        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].role = input.value.trim();
-      });
-      document.querySelectorAll("[data-lead-name]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-lead-name"), 10);
-        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].name = input.value.trim();
-      });
-      document.querySelectorAll("[data-lead-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-lead-title"), 10);
-        if (brochureData.committee.leadership[idx]) brochureData.committee.leadership[idx].title = input.value.trim();
-      });
-
-      document.querySelectorAll("[data-dean-name]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dean-name"), 10);
-        if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].name = input.value.trim();
-      });
-      document.querySelectorAll("[data-dean-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-dean-title"), 10);
-        if (brochureData.committee.deans[idx]) brochureData.committee.deans[idx].title = input.value.trim();
-      });
-
-      document.querySelectorAll("[data-hod-name]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-hod-name"), 10);
-        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].name = input.value.trim();
-      });
-      document.querySelectorAll("[data-hod-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-hod-title"), 10);
-        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].title = input.value.trim();
-      });
-      document.querySelectorAll("[data-hod-tag]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-hod-tag"), 10);
-        if (brochureData.committee.hods[idx]) brochureData.committee.hods[idx].tag = input.value.trim();
-      });
-
-      // Venue & Contacts
-      brochureData.venue.title = document.getElementById("cms-venue-title").value.trim();
-      brochureData.venue.desc = document.getElementById("cms-venue-desc").value.trim();
-      brochureData.venue.address = document.getElementById("cms-venue-address").value.trim();
-
-      brochureData.contact.convenerName = document.getElementById("cms-contact-name").value.trim();
-      brochureData.contact.convenerRole = document.getElementById("cms-contact-role").value.trim();
-      brochureData.contact.email = document.getElementById("cms-contact-email").value.trim();
-      brochureData.contact.phone = document.getElementById("cms-contact-phone").value.trim();
-
-      // Branding & QR
-      const logoUrlInput = document.getElementById("cms-logo-url").value.trim();
-      if (logoUrlInput) {
-        brochureData.media = brochureData.media || {};
-        brochureData.media.logoSrc = logoUrlInput;
+        saveDataToLocalStorage();
+        renderBrochureView();
+        closeAdminCmsModal();
+        showToastNotification("All brochure changes, media, and committee rosters successfully saved & persisted!", "success");
+      } catch (err) {
+        console.error("Save failure:", err);
+        showToastNotification("Storage failed! Quota limit may have been exceeded.", "error");
       }
-      brochureData.registration.url = document.getElementById("cms-reg-url").value.trim();
-
-      // Custom Blocks
-      document.querySelectorAll("[data-block-badge]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-block-badge"), 10);
-        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].badge = input.value.trim();
-      });
-      document.querySelectorAll("[data-block-title]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-block-title"), 10);
-        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].title = input.value.trim();
-      });
-      document.querySelectorAll("[data-block-desc]").forEach(input => {
-        const idx = parseInt(input.getAttribute("data-block-desc"), 10);
-        if (brochureData.customBlocks[idx]) brochureData.customBlocks[idx].desc = input.value.trim();
-      });
-
-      saveDataToLocalStorage();
-      renderBrochureView();
-      closeAdminCmsModal();
-      showToastNotification("Brochure updated and persisted successfully!");
     }
 
     function saveDataToLocalStorage() {
-      localStorage.setItem("jce_conclave_brochure_data", JSON.stringify(brochureData));
+      try {
+        localStorage.setItem("jce_conclave_brochure_data_v2", JSON.stringify(brochureData));
+      } catch (e) {
+        if (e.name === 'QuotaExceededError') {
+          showToastNotification("Storage Quota Exceeded! Please use smaller photo or logo files.", "error");
+        }
+        throw e;
+      }
     }
 
     function loadDataFromLocalStorage() {
-      const stored = localStorage.getItem("jce_conclave_brochure_data");
+      const stored = localStorage.getItem("jce_conclave_brochure_data_v2");
       if (stored) {
         try {
           brochureData = JSON.parse(stored);
+          if (!brochureData.committee.patrons) {
+            brochureData.committee.patrons = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA.committee.patrons));
+          }
+          if (!brochureData.committee.conveners) {
+            brochureData.committee.conveners = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA.committee.conveners));
+          }
+          if (!brochureData.templates) {
+            brochureData.templates = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA.templates));
+          }
         } catch (e) {
           console.warn("Storage parse error; reverting to defaults:", e);
         }
@@ -2128,26 +2926,31 @@
     }
 
     function resetBrochureDefaults() {
+      if (!confirm("Are you sure you want to reset all configurations to factory defaults? This will erase all uploaded photos, templates, and customized text.")) {
+        return;
+      }
       brochureData = JSON.parse(JSON.stringify(DEFAULT_BROCHURE_DATA));
+      stagedLogoDataUrl = null;
+      stagedQrDataUrl = null;
       saveDataToLocalStorage();
       renderBrochureView();
       populateCmsFormFields();
-      showToastNotification("All brochure contents reset to default configurations!");
+      showToastNotification("All brochure contents reset to default configurations!", "info");
     }
 
     function exportBrochureJsonConfig() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(brochureData, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `JCE_Faculty_Conclave_Config_${new Date().toISOString().slice(0,10)}.json`);
+      downloadAnchor.setAttribute("download", `JCE_Faculty_Conclave_Master_Config_${new Date().toISOString().slice(0,10)}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
-      showToastNotification("Configuration JSON exported.");
+      showToastNotification("Master Configuration JSON exported.", "success");
     }
 
     // =========================================================================
-    // REGISTRATION MODAL & TOAST UI
+    // PARTICIPANT REGISTRATION & TOAST NOTIFICATION ENGINE
     // =========================================================================
     function openRegistrationModal() {
       const modal = document.getElementById("registration-modal");
@@ -2170,20 +2973,34 @@
       const name = document.getElementById("reg-name").value;
       const dept = document.getElementById("reg-dept").value;
       closeRegistrationModal();
-      showToastNotification(`Registration confirmed for ${name} (${dept})!`);
+      showToastNotification(`Registration confirmed for ${name} (${dept})!`, "success");
     }
 
-    function showToastNotification(message) {
+    function showToastNotification(message, type = "info") {
       let toast = document.getElementById("brochure-toast");
       if (!toast) {
         toast = document.createElement("div");
         toast.id = "brochure-toast";
-        toast.className = "fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 text-xs font-semibold flex items-center gap-3 transition-transform duration-300 transform translate-y-24 max-w-sm";
+        toast.className = "fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border text-xs font-semibold flex items-center gap-3 transition-transform duration-300 transform translate-y-24 max-w-sm";
         document.body.appendChild(toast);
       }
-      toast.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span><span>${message}</span>`;
+
+      let dotColor = "bg-emerald-400";
+      let borderColor = "border-slate-700";
+      if (type === "error") {
+        dotColor = "bg-rose-500";
+        borderColor = "border-rose-500/50";
+      } else if (type === "info") {
+        dotColor = "bg-amber-400";
+        borderColor = "border-amber-400/50";
+      }
+
+      toast.className = `fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl ${borderColor} border text-xs font-semibold flex items-center gap-3 transition-transform duration-300 transform max-w-sm`;
+      toast.innerHTML = `<span class="w-2.5 h-2.5 rounded-full ${dotColor} animate-pulse shrink-0"></span><span>${message}</span>`;
       toast.classList.remove("translate-y-24");
-      setTimeout(() => { toast.classList.add("translate-y-24"); }, 3800);
+      
+      clearTimeout(toast._timeout);
+      toast._timeout = setTimeout(() => { toast.classList.add("translate-y-24"); }, 3800);
     }
 
     // =========================================================================
